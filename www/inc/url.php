@@ -1,3 +1,3 @@
 <?php
-	$webmainurlpath = 'http://www.capable.dk/infoscreen';
+	$webmainurlpath = 'http://localhost/infoscreen';
 ?>
