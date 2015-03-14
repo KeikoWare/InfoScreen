@@ -21,7 +21,7 @@ SET time_zone = "+00:00";
 --
 CREATE DATABASE `infoscreen` DEFAULT CHARACTER SET latin1 COLLATE latin1_danish_ci;
 -- --------------------------------------------------------
-
+USE `infoscreen`;
 --
 -- Struktur-dump for tabellen `IS_boxes`
 --
