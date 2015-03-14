@@ -19,6 +19,7 @@ SET time_zone = "+00:00";
 --
 -- Database: `infoscreen`
 --
+DROP DATABASE IF EXISTS `infoscreen`;
 CREATE DATABASE `infoscreen` DEFAULT CHARACTER SET latin1 COLLATE latin1_danish_ci;
 -- --------------------------------------------------------
 USE `infoscreen`;
