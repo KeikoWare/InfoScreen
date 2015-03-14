@@ -11,7 +11,7 @@
  
  
 // Der oprettes forbindelse til databasen
-	$link = mysql_connect("infoscreen", "db_user", "Inf0Scr33n") or die("Could not connect: " . mysql_error() . "<br>");
+	$link = mysql_connect("localhost", "db_user", "Inf0Scr33n") or die("Could not connect: " . mysql_error() . "<br>");
 	mysql_select_db("infoscreen", $link) or die("Could not select DB: " . mysql_error() . "<br>");
 	mysql_set_charset('utf8',$link);
 
