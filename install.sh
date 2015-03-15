@@ -15,9 +15,12 @@ sudo ln -s /usr/lib/arm-linux-gnueabihf/nss/ /usr/lib/nss
 
 echo "# KeikoWare Additions" >> ~/.config/openbox/autostart
 echo "# Screen settings" >> ~/.config/openbox/autostart
+echo "# Screensaver off" >> ~/.config/openbox/autostart
 echo "@xset s off" >> ~/.config/openbox/autostart
-echo "@xset -dpms" >> ~/.config/openbox/autostart
+echo "# Screen blanking off" >> ~/.config/openbox/autostart
 echo "@xset s noblank" >> ~/.config/openbox/autostart
+echo "# Screen powermanagement off" >> ~/.config/openbox/autostart
+echo "@xset -dpms" >> ~/.config/openbox/autostart
 echo "# Start Chormium in kiosk mode with incognito to avoid crash start, when powered of hard" >> ~/.config/openbox/autostart
 echo "@chromium --kiosk --incognito http://localhost/infoscreen/onscreen" >> ~/.config/openbox/autostart
 sudo chmod +x ~/.config/openbox/autostart
