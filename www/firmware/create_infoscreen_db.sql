@@ -26,6 +26,26 @@ USE `infoscreen`;
 --
 -- Struktur-dump for tabellen `IS_boxes`
 --
+DROP TABLE IF EXISTS `IS_boxes`;
+CREATE TABLE IF NOT EXISTS `IS_boxes` (
+  `boxID` int(11) NOT NULL AUTO_INCREMENT,
+  `scheme` int(11) NOT NULL,
+  `name` varchar(30) NOT NULL,
+  `type` tinyint(4) NOT NULL,
+  `position` varchar(30) NOT NULL,
+  `template` int(11) NOT NULL DEFAULT '1',
+  `left` int(11) NOT NULL,
+  `top` int(11) NOT NULL,
+  `background` varchar(50) NOT NULL,
+  `displayColor` varchar(10) NOT NULL,
+  `editColor` varchar(10) NOT NULL,
+  `padding` int(11) NOT NULL,
+  `width` int(11) NOT NULL,
+  `height` int(11) NOT NULL,
+  `zindex` int(11) NOT NULL,
+  `active` varchar(1) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`boxID`)
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=156 ;
 
 INSERT INTO `IS_boxes` (`boxID`, `scheme`, `name`, `type`, `position`, `template`, `left`, `top`, `background`, `displayColor`, `editColor`, `padding`, `width`, `height`, `zindex`, `active`) VALUES
 (1, 4, 'Video', 0, 'absolute', 1, 1101, 155, '', 'undefined', 'FF0000', 0, 608, 282, 1, '1'),
