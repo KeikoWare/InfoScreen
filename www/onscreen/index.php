@@ -91,7 +91,24 @@ E-Mail: info@capable.dk
 	<script src="js/jquery.smoothdivscroll-1.3-min.js" type="text/javascript"></script>
 
   <script>
-	var ip = setTimeout(function(){document.getElementById('ipaddress').style.display='none';},10000);
+	var ip = setTimeout(function(){
+		document.getElementById('ipaddress').style.display='none';
+		var height = document.body.clientHeight;
+		var width = document.body.clientWidth;
+
+		var xmlhttp;
+		if (window.XMLHttpRequest){// code for IE7+, Firefox, Chrome, Opera, Safari
+			xmlhttp=new XMLHttpRequest();
+		}
+		else{// code for IE6, IE5
+			xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+		}
+		xmlhttp.open("GET","http://localhost/saveSystemScreenDim.php?width=" + width +"&height=" + height,false); // ASYNC = false
+		xmlhttp.send();
+}
+
+		
+	},10000);
 
   $(function() {
 
