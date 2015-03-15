@@ -17,3 +17,8 @@ echo "@xset -dpms" >> ~/.config/openbox/autostart
 echo "@xset s noblank" >> ~/.config/openbox/autostart
 echo "@chromium --kiosk --incognito http://localhost/infoscreen/onscreen" >> ~/.config/openbox/autostart
 sudo chmod +x ~/.config/openbox/autostart
+
+echo "[Desktop]" > ~/.dmrc
+echo "Session=openbox" >> ~/.dmrc
+
+sudo reboot
