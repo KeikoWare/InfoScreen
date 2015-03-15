@@ -10,3 +10,10 @@ mysql --user=root --password=Inf0Scr33n < ~/infoscreen/www/firmware/create_infos
 sudo rm /var/www/* -r
 sudo cp ~/infoscreen/www/ /var -r
 sudo service apache2 restart
+sudo apt-get install -q -y chromium x11-xserver-utils unclutter ttf-mscorefonts-installer
+
+echo "@xset s off" > ~/.config/openbox/autostart
+echo "@xset -dpms" >> ~/.config/openbox/autostart
+echo "@xset s noblank" >> ~/.config/openbox/autostart
+echo "@chromium --kiosk --incognito http://localhost/infoscreen/onscreen" >> ~/.config/openbox/autostart
+
