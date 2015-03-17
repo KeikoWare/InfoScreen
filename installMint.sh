@@ -18,19 +18,19 @@ sudo update-alternatives --config default.plymouth
 sudo update-initramfs –u
 
 
-echo "# KeikoWare Additions" >> ~/.config/openbox/autostart
-echo "# Screen settings" >> ~/.config/openbox/autostart
-echo "# Screensaver off" >> ~/.config/openbox/autostart
-echo "xset s off" >> ~/.config/openbox/autostart
-echo "# Screen blanking off" >> ~/.config/openbox/autostart
-echo "xset s noblank" >> ~/.config/openbox/autostart
-echo "# Screen powermanagement off" >> ~/.config/openbox/autostart
-echo "xset -dpms" >> ~/.config/openbox/autostart
-echo "# Start Chormium in kiosk mode with incognito to avoid crash start, when powered of hard" >> ~/.config/openbox/autostart
-echo "chromium --kiosk --incognito --disable-translate http://localhost/onscreen" >> ~/.config/openbox/autostart
-sudo chmod +x ~/.config/openbox/autostart
+echo "# KeikoWare Additions" >> ~/.config/autostart
+echo "# Screen settings" >> ~/.config/autostart
+echo "# Screensaver off" >> ~/.config/autostart
+echo "xset s off" >> ~/.config/autostart
+echo "# Screen blanking off" >> ~/.config/autostart
+echo "xset s noblank" >> ~/.config/autostart
+echo "# Screen powermanagement off" >> ~/.config/autostart
+echo "xset -dpms" >> ~/.config/autostart
+echo "# Start Chormium in kiosk mode with incognito to avoid crash start, when powered of hard" >> ~/.config/autostart
+echo "chromium --kiosk --incognito --disable-translate http://localhost/onscreen" >> ~/.config/autostart
+sudo chmod +x ~/.config/autostart
 
-echo "[Desktop]" > ~/.dmrc
-echo "Session=openbox" >> ~/.dmrc
+# echo "[Desktop]" > ~/.dmrc
+# echo "Session=openbox" >> ~/.dmrc
 
 sudo reboot
