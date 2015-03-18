@@ -17,7 +17,11 @@ sudo ln -s /usr/lib/arm-linux-gnueabihf/nss/ /usr/lib/nss
 sudo update-alternatives --config default.plymouth
 sudo update-initramfs –u
 
-sudo sed –I ‘s/"check_default_browser": true,/"check_default_browser": false,/g’ ~/.config/chromium/Default/Preferences
+sudo sed –I ‘s/"check_default_browser": true/"check_default_browser": false/g’ ~/.config/chromium/Default/Preferences
+
+# make chromium start at boot
+sudo mkdir ~/.config/autostart
+sudo cp ~/infoscreen/MintStartupScript.sh.desktop ~/.config/autostart
 
 # echo "[Desktop]" > ~/.dmrc
 # echo "Session=openbox" >> ~/.dmrc

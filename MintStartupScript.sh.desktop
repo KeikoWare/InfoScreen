@@ -1,6 +1,6 @@
 [Desktop Entry]
 Type=Application
-Exec=sh -c "exec /home/keiko/infoscreen/MintStartupScript.sh"
+Exec=sh -c "exec ~/infoscreen/MintStartupScript.sh"
 Hidden=false
 NoDisplay=false
 X-GNOME-Autostart-enabled=true
