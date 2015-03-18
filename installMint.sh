@@ -23,6 +23,8 @@ sudo sed –I ‘s/"check_default_browser": true/"check_default_browser": false/
 sudo mkdir ~/.config/autostart
 sudo cp ~/infoscreen/MintStartupScript.sh.desktop ~/.config/autostart
 
+sudo cp ~/infoscreen/mdm.conf /etc/mdm 
+
 # echo "[Desktop]" > ~/.dmrc
 # echo "Session=openbox" >> ~/.dmrc
 
