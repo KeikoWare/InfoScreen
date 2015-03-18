@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Exec=sh -c "exec /home/keiko/infoscreen/MintStartupScript.sh"
+Hidden=false
+NoDisplay=false
+X-GNOME-Autostart-enabled=true
+Name[en_DK]=KeikoWare StartupScript
+Name=KeikoWare StartupScript
+Comment[en_DK]=KeikoWare Startupscript - cloned into git repo from source
+Comment=KeikoWare Startupscript - cloned into git repo from source
