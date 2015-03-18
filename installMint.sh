@@ -17,18 +17,7 @@ sudo ln -s /usr/lib/arm-linux-gnueabihf/nss/ /usr/lib/nss
 sudo update-alternatives --config default.plymouth
 sudo update-initramfs –u
 
-
-echo "# KeikoWare Additions" >> ~/.config/autostart
-echo "# Screen settings" >> ~/.config/autostart
-echo "# Screensaver off" >> ~/.config/autostart
-echo "xset s off" >> ~/.config/autostart
-echo "# Screen blanking off" >> ~/.config/autostart
-echo "xset s noblank" >> ~/.config/autostart
-echo "# Screen powermanagement off" >> ~/.config/autostart
-echo "xset -dpms" >> ~/.config/autostart
-echo "# Start Chormium in kiosk mode with incognito to avoid crash start, when powered of hard" >> ~/.config/autostart
-echo "chromium --kiosk --incognito --disable-translate http://localhost/onscreen" >> ~/.config/autostart
-sudo chmod +x ~/.config/autostart
+sudo sed –I ‘s/"check_default_browser": true,/"check_default_browser": false,/g’ ~/.config/chromium/Default/Preferences
 
 # echo "[Desktop]" > ~/.dmrc
 # echo "Session=openbox" >> ~/.dmrc
