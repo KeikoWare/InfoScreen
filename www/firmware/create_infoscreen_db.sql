@@ -1,22 +1,19 @@
--- phpMyAdmin SQL Dump
--- version 3.5.8.1
--- http://www.phpmyadmin.net
+-- MySQL dump 10.13  Distrib 5.5.40, for debian-linux-gnu (i686)
 --
--- Vært: 10.246.17.48:3306
--- Genereringstid: 21. 02 2015 kl. 21:06:12
--- Serverversion: 5.5.41-MariaDB-1~wheezy
--- PHP-version: 5.3.3-7+squeeze15
-
-SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
-SET time_zone = "+00:00";
-
+-- Host: localhost    Database: infoscreen
+-- ------------------------------------------------------
+-- Server version	5.5.40-0ubuntu0.14.04.1
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
 /*!40101 SET NAMES utf8 */;
-
---
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 -- Database: `infoscreen`
 --
 DROP DATABASE IF EXISTS `infoscreen`;
@@ -24,10 +21,15 @@ CREATE DATABASE `infoscreen` DEFAULT CHARACTER SET latin1 COLLATE latin1_danish_
 -- --------------------------------------------------------
 USE `infoscreen`;
 --
--- Struktur-dump for tabellen `IS_boxes`
+
 --
+-- Table structure for table `IS_boxes`
+--
+
 DROP TABLE IF EXISTS `IS_boxes`;
-CREATE TABLE IF NOT EXISTS `IS_boxes` (
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `IS_boxes` (
   `boxID` int(11) NOT NULL AUTO_INCREMENT,
   `scheme` int(11) NOT NULL,
   `name` varchar(30) NOT NULL,
@@ -45,88 +47,27 @@ CREATE TABLE IF NOT EXISTS `IS_boxes` (
   `zindex` int(11) NOT NULL,
   `active` varchar(1) NOT NULL DEFAULT '0',
   PRIMARY KEY (`boxID`)
-) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=156 ;
+) ENGINE=MyISAM AUTO_INCREMENT=55 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
-INSERT INTO `IS_boxes` (`boxID`, `scheme`, `name`, `type`, `position`, `template`, `left`, `top`, `background`, `displayColor`, `editColor`, `padding`, `width`, `height`, `zindex`, `active`) VALUES
-(1, 4, 'Video', 0, 'absolute', 1, 1101, 155, '', 'undefined', 'FF0000', 0, 608, 282, 1, '1'),
-(2, 4, 'Hjemmesider', 0, 'absolute', 1, 25, 631, '', 'undefined', '00FF00', 0, 1886, 442, 2, '1'),
-(3, 4, 'top', 0, 'absolute', 1, 0, 0, '', 'undefined', '0000FF', 0, 1920, 155, 3, '1'),
-(112, 1, 'Info', 0, 'absolute', 1, 622, 220, '', '', '00FF00', 0, 580, 840, 3, '1'),
-(111, 1, 'Medlemsliste', 0, 'absolute', 1, 20, 220, '', '', 'FFFF00', 0, 580, 840, 2, '1'),
-(110, 0, '', 0, '', 1, 0, 0, '', '', '', 0, 0, 0, 0, '0'),
-(77, 0, '', 0, '', 0, 0, 0, '', '', '', 0, 0, 0, 0, '0'),
-(79, 0, '', 0, '', 0, 0, 0, '', '', '', 0, 0, 0, 0, '0'),
-(80, 0, '', 0, '', 0, 0, 0, '', '', '', 0, 0, 0, 0, '0'),
-(100, 0, '', 0, '', 1, 0, 0, '', '', '', 0, 0, 0, 0, '0'),
-(101, 0, '', 0, '', 1, 0, 0, '', '', '', 0, 0, 0, 0, '0'),
-(83, 0, '', 0, '', 0, 0, 0, '', '', '', 0, 0, 0, 0, '0'),
-(102, 0, '', 0, '', 1, 0, 0, '', '', '', 0, 0, 0, 0, '0'),
-(109, 0, '', 0, '', 1, 0, 0, '', '', '', 0, 0, 0, 0, '0'),
-(108, 0, '', 0, '', 1, 0, 0, '', '', '', 0, 0, 0, 0, '0'),
-(106, 0, '', 0, '', 1, 0, 0, '', '', '', 0, 0, 0, 0, '0'),
-(105, 0, '', 0, '', 1, 0, 0, '', '', '', 0, 0, 0, 0, '0'),
-(103, 0, '', 0, '', 1, 0, 0, '', '', '', 0, 0, 0, 0, '0'),
-(88, 0, '', 0, '', 1, 0, 0, '', '', '', 0, 0, 0, 0, '0'),
-(91, 0, '', 0, '', 1, 0, 0, '', '', '', 0, 0, 0, 0, '0'),
-(92, 0, '', 0, '', 1, 0, 0, '', '', '', 0, 0, 0, 0, '0'),
-(107, 1, 'Banner', 0, 'absolute', 1, 0, 0, '', '', 'FF0000', 0, 1920, 200, 1, '1'),
-(86, 4, 'new_layer 86', 0, 'absolute', 1, 64, 177, '', 'undefined', 'FF00AA', 0, 432, 301, 6, '1'),
-(85, 0, '', 0, '', 0, 0, 0, '', '', '', 0, 0, 0, 0, '0'),
-(84, 4, 'new_layer 84', 0, 'absolute', 1, 1102, 446, '', 'undefined', 'FFAA00', 0, 450, 180, 5, '1'),
-(74, 0, '', 0, '', 0, 0, 0, '', '', '', 0, 0, 0, 0, '0'),
-(73, 0, '', 0, '', 0, 0, 0, '', '', '', 0, 0, 0, 0, '0'),
-(72, 0, '', 0, '', 0, 0, 0, '', '', '', 0, 0, 0, 0, '0'),
-(71, 0, '', 0, '', 0, 0, 0, '', '', '', 0, 0, 0, 0, '0'),
-(70, 0, '', 0, '', 0, 0, 0, '', '', '', 0, 0, 0, 0, '0'),
-(67, 0, '', 0, '', 0, 0, 0, '', '', '', 0, 0, 0, 0, '0'),
-(113, 0, '', 0, '', 1, 0, 0, '', '', '', 0, 0, 0, 0, '0'),
-(114, 0, '', 0, '', 1, 0, 0, '', '', '', 0, 0, 0, 0, '0'),
-(115, 8, 'new_layer 115', 0, 'absolute', 1, 0, 0, '', '', 'FF0000', 0, 800, 90, 1, '1'),
-(116, 8, 'new_layer 116', 0, 'absolute', 1, 9, 106, '', '', 'FFFF00', 0, 392, 476, 2, '1'),
-(117, 8, 'new_layer 117', 0, 'absolute', 1, 425, 113, '', '', '00FF00', 0, 320, 240, 3, '1'),
-(118, 9, 'Top box', 0, 'absolute', 1, 0, 0, '', '', 'FF0000', 0, 800, 90, 1, '1'),
-(119, 9, 'Agenda', 0, 'absolute', 1, 3, 93, '', '', 'FFFF00', 0, 397, 418, 2, '1'),
-(120, 9, 'new_layer 120', 0, 'absolute', 1, 405, 93, '', '', '00FF00', 0, 382, 237, 3, '1'),
-(121, 9, 'new_layer 121', 0, 'absolute', 1, 12, 520, '', '', '0000FF', 0, 777, 75, 4, '1'),
-(122, 10, 'Topbanner', 0, 'absolute', 1, 0, 0, '', '', 'FF0000', 0, 800, 90, 1, '1'),
-(123, 10, 'new_layer 123', 0, 'absolute', 1, 1, 89, '', '', 'FFFF00', 0, 436, 414, 2, '1'),
-(124, 10, 'new_layer 124', 0, 'absolute', 1, 499, 87, '', '', '00FF00', 0, 300, 200, 3, '1'),
-(126, 4, 'new_layer 126', 0, 'absolute', 1, 539, 180, '', 'undefined', 'FFFF00', 0, 526, 325, 7, '1'),
-(128, 4, 'new_layer 128', 0, 'absolute', 1, 305, 400, '', '5EA9FF', 'FF8636', 0, 300, 200, 8, '1'),
-(129, 11, 'new_layer 129', 0, 'absolute', 1, 0, 0, '', 'FFFFFF', 'FF0000', 0, 1920, 200, 1, '1'),
-(130, 11, 'udahds', 0, 'absolute', 1, 19, 211, '', 'FFB48F', 'FFFF00', 0, 911, 839, 2, '1'),
-(131, 11, 'new_layer 131', 0, 'absolute', 1, 416, 595, '', '792BFF', '00FF00', 0, 972, 348, 7, '1'),
-(132, 11, 'new_layer 132', 0, 'absolute', 1, 47, 303, '', 'FFFFFF', '0000FF', 0, 455, 485, 4, '1'),
-(133, 11, 'new_layer 133', 0, 'absolute', 1, 1447, 775, '', 'FFE047', 'FFAA00', 0, 451, 279, 5, '1'),
-(134, 11, 'new_layer 134', 0, 'absolute', 1, 563, 29, '', 'FFFFFF', 'FF00AA', 0, 741, 1048, 8, '1'),
-(135, 11, 'new_layer 135', 0, 'absolute', 1, 0, 515, '', '8EFF38', '999999', 0, 1920, 51, 9, '1'),
-(137, 11, 'new_layer 137', 0, 'absolute', 1, 784, 333, '', '67FF26', 'FF0000', 0, 1028, 407, 11, '1'),
-(138, 12, 'new_layer 138', 0, 'absolute', 1, 48, 0, '', 'FFFFFF', 'FF0000', 0, 928, 171, 1, '1'),
-(139, 12, 'new_layer 139', 0, 'absolute', 1, -127, 208, '', 'FFFFFF', 'FFFF00', 0, 440, 376, 2, '1'),
-(140, 12, 'new_layer 140', 0, 'absolute', 1, 544, 553, '', 'FFFFFF', '00FF00', 0, 412, 167, 3, '1'),
-(141, 12, 'new_layer 141', 0, 'absolute', 1, 16, 631, '', 'FFFFFF', '0000FF', 0, 381, 111, 4, '1'),
-(142, 12, 'new_layer 142', 0, 'absolute', 1, 380, 184, '', 'FFFFFF', 'FFAA00', 0, 627, 332, 5, '1'),
-(143, 13, 'BorderBox', 0, 'absolute', 1, 10, 5, '', '000000', 'FF0000', 0, 1902, 152, 2, '1'),
-(144, 13, 'WhiteFront', 0, 'absolute', 1, 11, 6, '', 'FFFFFF', 'FFFF00', 0, 1900, 150, 2, '1'),
-(145, 13, 'SignaturImage', 0, 'absolute', 1, 33, 31, '', 'FFFFFF', '00FF00', 0, 249, 100, 3, '1'),
-(146, 13, 'Top billede', 0, 'absolute', 1, 881, 31, '', 'FFFFFF', '0000FF', 0, 1000, 100, 4, '1'),
-(147, 13, 'Mødelokaler', 0, 'absolute', 1, 64, 181, '', 'FFFFFF', 'FFAA00', 0, 967, 813, 1, '1'),
-(148, 13, 'RSS feed', 0, 'absolute', 1, 329, 1023, '', 'FFFFFF', 'FF00AA', 0, 1592, 51, 6, '1'),
-(149, 13, 'Dato og tid', 0, 'absolute', 1, 49, 1029, '', 'FFFFFF', '999999', 0, 264, 47, 7, '1'),
-(150, 13, 'Blå splitterboks', 0, 'absolute', 1, 313, 1005, '', '0022FF', '67FF26', 0, 21, 75, 8, '1'),
-(155, 14, 'new_layer 155', 0, 'absolute', 1, 125, 125, '', 'FFFFFF', 'FF0000', 0, 300, 200, 1, '1'),
-(152, 13, 'Teambuilding', 0, 'absolute', 1, 1480, 172, '', 'FFFFFF', 'FF0000', 0, 400, 400, 9, '1'),
-(153, 13, 'Eksklusive', 0, 'absolute', 1, 1481, 591, '', 'FFFFFF', 'FF0000', 0, 400, 400, 10, '1'),
-(154, 13, 'Video', 0, 'absolute', 1, 64, 704, '', 'FFFFFF', 'FF0000', 0, 449, 289, 11, '1');
+--
+-- Dumping data for table `IS_boxes`
+--
 
--- --------------------------------------------------------
+LOCK TABLES `IS_boxes` WRITE;
+/*!40000 ALTER TABLE `IS_boxes` DISABLE KEYS */;
+INSERT INTO `IS_boxes` VALUES (28,3,'Splitter',0,'absolute',1,241,1005,'','1E4867','00FF00',0,35,75,3,'1'),(3,1,'Logo',0,'absolute',1,51,15,'','FFFFFF','00FF00',0,410,125,3,'1'),(23,0,'',0,'',1,0,0,'','','',0,0,0,0,'0'),(24,1,'new_layer 24',0,'absolute',1,1240,50,'','C0C0C0','FFFF00',0,5,940,10,'1'),(5,1,'Newsfeed',0,'absolute',1,275,1017,'','FCFCFC','FFAA00',0,1645,64,10,'1'),(6,1,'Ur dato',0,'absolute',1,24,1025,'','FCFCFC','FF00AA',0,209,49,6,'1'),(7,1,'Splitter',0,'absolute',1,241,1005,'','1E4867','33B4FF',0,35,75,11,'1'),(8,1,'Mødelokaler',0,'absolute',1,51,170,'','FCFCFC','999999',0,1185,856,8,'1'),(9,0,'',0,'',1,0,0,'','','',0,0,0,0,'0'),(10,1,'Reklame top',0,'absolute',1,1400,91,'','FCFCFC','FF0000',0,451,415,9,'1'),(11,1,'Reklame bund',0,'absolute',1,1400,550,'','FCFCFC','FF0000',0,451,415,10,'1'),(26,3,'Logo',0,'absolute',1,51,15,'','FFFFFF','FF0000',0,411,125,1,'1'),(27,3,'Ur dato',0,'absolute',1,23,1028,'','FCFCFC','FFFF00',0,209,49,2,'1'),(14,2,'Logo',0,'absolute',1,51,15,'','FFFFFF','00FF00',0,411,125,3,'1'),(25,2,'Divider',0,'absolute',1,1240,51,'','C0C0C0','FFFF00',0,5,940,11,'1'),(16,2,'Newsfeed',0,'absolute',1,276,1020,'','FCFCFC','FFAA00',0,1645,60,5,'1'),(17,2,'Ur dato',0,'absolute',1,23,1028,'','FCFCFC','FF00AA',0,209,49,6,'1'),(18,2,'Splitter',0,'absolute',1,241,1005,'','1E4867','999999',0,35,75,7,'1'),(19,2,'Video',0,'absolute',1,61,244,'','FCFCFC','C0FF61',0,1116,635,8,'1'),(20,0,'',0,'',1,0,0,'','','',0,0,0,0,'0'),(21,2,'Økologisk',0,'absolute',1,1428,725,'','FCFCFC','FF0000',0,300,200,9,'1'),(22,2,'Aftenensmenu',0,'absolute',1,1295,95,'','FCFCFC','4DFFF3',0,540,625,10,'1'),(29,3,'News feed',0,'absolute',1,275,1020,'','FCFCFC','0000FF',0,1645,60,4,'1'),(30,3,'Divider',0,'absolute',1,1240,51,'','C0C0C0','FFAA00',0,5,940,5,'1'),(31,3,'Aftenens menu',0,'absolute',1,1295,95,'','FCFCFC','FF00AA',0,540,625,6,'1'),(32,3,'Økologisk',0,'absolute',1,1428,725,'','FCFCFC','999999',0,300,200,7,'1'),(33,3,'Video',0,'absolute',1,61,244,'','FCFCFC','B3FFE3',0,1116,635,8,'1'),(34,4,'Logo',0,'absolute',1,51,15,'','FCFCFC','FF0000',0,411,125,1,'1'),(35,4,'Ur dato',0,'absolute',1,23,1028,'','FCFCFC','FFFF00',0,209,49,2,'1'),(36,4,'Splitter',0,'absolute',1,241,1005,'','1E4867','00FF00',0,35,75,3,'1'),(37,4,'Newsfeed',0,'absolute',1,275,1020,'','FCFCFC','0000FF',0,1645,60,4,'1'),(38,4,'Divider',0,'absolute',1,1240,51,'','C0C0C0','FFAA00',0,5,940,5,'1'),(39,4,'Fester',0,'absolute',1,152,240,'','FCFCFC','FF00AA',0,1083,763,6,'1'),(40,4,'Furesø',0,'absolute',1,53,251,'','FFFFFF','999999',0,85,85,7,'1'),(41,4,'Top agenda',0,'absolute',1,52,168,'','FCFCFC','E2FF52',0,1183,70,8,'1'),(42,4,'Mølleåen',0,'absolute',1,53,355,'','FFFFFF','FF0000',0,85,85,9,'1'),(43,4,'Bagsværdsø',0,'absolute',1,53,460,'','FFFFFF','FF0000',0,85,85,10,'1'),(44,4,'Lyngby sø',0,'absolute',1,53,565,'','FFFFFF','FF0000',0,85,85,11,'1'),(45,4,'Verandastuen',0,'absolute',1,53,670,'','FFFFFF','FF0000',0,85,85,12,'1'),(46,4,'Vejlesø',0,'absolute',1,53,775,'','FFFFFF','FF0000',0,85,85,13,'1'),(47,4,'Frederiksdal',0,'absolute',1,53,880,'','FFFFFF','FF0000',0,85,85,14,'1'),(48,4,'Reklame Top',0,'absolute',1,1400,91,'','FCFCFC','FF0000',0,451,415,15,'1'),(49,4,'Reklame bund',0,'absolute',1,1400,551,'','FCFCFC','FF0000',0,451,415,16,'1'),(50,5,'Logo',0,'absolute',1,51,15,'','fcfcfc','FF0000',0,411,125,1,'1'),(51,5,'Ur dato',0,'absolute',1,23,1028,'','fcfcfc','FFFF00',0,209,40,9,'1'),(52,5,'Diveder',0,'absolute',1,0,0,'','1e4867','00FF00',0,0,0,3,'1'),(53,5,'Splitter',0,'absolute',1,241,1005,'','1e4867','0000FF',0,35,75,4,'1'),(54,5,'Video',0,'absolute',1,0,0,'','fcfcfc','FFAA00',0,1920,1080,5,'1');
+/*!40000 ALTER TABLE `IS_boxes` ENABLE KEYS */;
+UNLOCK TABLES;
 
 --
 -- Table structure for table `IS_boxestemp`
 --
 
 DROP TABLE IF EXISTS `IS_boxestemp`;
-CREATE TABLE IF NOT EXISTS `IS_boxestemp` (
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `IS_boxestemp` (
   `boxID` int(11) NOT NULL AUTO_INCREMENT,
   `scheme` int(11) NOT NULL,
   `name` varchar(30) NOT NULL,
@@ -143,16 +84,26 @@ CREATE TABLE IF NOT EXISTS `IS_boxestemp` (
   `height` int(11) NOT NULL,
   `zindex` int(11) NOT NULL,
   PRIMARY KEY (`boxID`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
--- --------------------------------------------------------
+--
+-- Dumping data for table `IS_boxestemp`
+--
+
+LOCK TABLES `IS_boxestemp` WRITE;
+/*!40000 ALTER TABLE `IS_boxestemp` DISABLE KEYS */;
+/*!40000 ALTER TABLE `IS_boxestemp` ENABLE KEYS */;
+UNLOCK TABLES;
 
 --
 -- Table structure for table `IS_schemes`
 --
 
 DROP TABLE IF EXISTS `IS_schemes`;
-CREATE TABLE IF NOT EXISTS `IS_schemes` (
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `IS_schemes` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` text NOT NULL,
   `active` int(11) NOT NULL,
@@ -165,54 +116,52 @@ CREATE TABLE IF NOT EXISTS `IS_schemes` (
   `backgroundImage` varchar(200) NOT NULL,
   `imageStyle` varchar(20) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=15 ;
+) ENGINE=MyISAM AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Dumping data for table `IS_schemes`
 --
 
-INSERT INTO `IS_schemes` (`id`, `name`, `active`, `starttime`, `endtime`, `period`, `width`, `height`, `background`, `backgroundImage`, `imageStyle`) VALUES
-(1, 'First design', 0, '00:00:00', '00:00:00', 0, 1920, 1080, 'FF3E30', 'upload/images/logo1.jpg', '2'),
-(9, 'Rawdeal', 0, '00:00:00', '00:00:00', 0, 800, 600, 'F9FFBF', '', '1'),
-(4, 'Test', 0, '00:00:00', '00:00:00', 0, 1920, 1080, 'FFFFFF', '', '1'),
-(11, 'Ulrik', 1, '00:00:00', '00:00:00', 0, 1920, 1080, 'FFFFFF', '', '1'),
-(10, 'Boomerang', 0, '00:00:00', '00:00:00', 0, 800, 600, 'F6FFA8', '', '1'),
-(8, 'Test ny', 0, '00:00:00', '00:00:00', 0, 800, 600, 'FFF708', '', '1'),
-(12, 'hotel', 0, '00:00:00', '00:00:00', 0, 1024, 768, 'FFFFFF', '', '1'),
-(13, 'Sinatur', 0, '00:00:00', '00:00:00', 0, 1920, 1080, 'FFFFFF', '', '1'),
-(14, 'test', 0, '00:00:00', '00:00:00', 0, 800, 600, 'FFFFFF', '', '1');
-
--- --------------------------------------------------------
+LOCK TABLES `IS_schemes` WRITE;
+/*!40000 ALTER TABLE `IS_schemes` DISABLE KEYS */;
+INSERT INTO `IS_schemes` VALUES (1,'Mødelokaler',1,'06:00:00','17:30:00',0,1920,1080,'FCFCFC','','1'),(2,'Menu',1,'16:00:00','21:00:00',0,1920,1080,'FCFCFC','','1'),(4,'Fest',0,'00:00:00','00:00:00',0,1920,1080,'FCFCFC','','1'),(3,'Menu2',0,'00:00:00','00:00:00',0,1920,1080,'FCFCFC','','1'),(5,'Test',1,'20:59:00','23:00:00',0,1920,1080,'FCFCFC','','1');
+/*!40000 ALTER TABLE `IS_schemes` ENABLE KEYS */;
+UNLOCK TABLES;
 
 --
 -- Table structure for table `IS_systemdata`
 --
 
 DROP TABLE IF EXISTS `IS_systemdata`;
-CREATE TABLE IF NOT EXISTS `IS_systemdata` (
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `IS_systemdata` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `sdtype` tinytext NOT NULL,
   `sdvalue` tinytext NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=5 ;
+) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Dumping data for table `IS_systemdata`
 --
 
-INSERT INTO `IS_systemdata` (`id`, `sdtype`, `sdvalue`) VALUES
-(1, 'reload', ''),
-(2, 'version', '1.10'),
-(4, 'zoom', '75');
-
--- --------------------------------------------------------
+LOCK TABLES `IS_systemdata` WRITE;
+/*!40000 ALTER TABLE `IS_systemdata` DISABLE KEYS */;
+INSERT INTO `IS_systemdata` VALUES (1,'zoom','75'),(2,'version','1.15CS'),(3,'reload','');
+/*!40000 ALTER TABLE `IS_systemdata` ENABLE KEYS */;
+UNLOCK TABLES;
 
 --
 -- Table structure for table `IS_templatedata`
 --
 
 DROP TABLE IF EXISTS `IS_templatedata`;
-CREATE TABLE IF NOT EXISTS `IS_templatedata` (
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `IS_templatedata` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `boxid` int(11) NOT NULL,
   `templateid` int(11) NOT NULL,
@@ -225,136 +174,52 @@ CREATE TABLE IF NOT EXISTS `IS_templatedata` (
   `int3` int(11) NOT NULL,
   `int4` int(11) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=91 ;
+) ENGINE=MyISAM AUTO_INCREMENT=51 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Dumping data for table `IS_templatedata`
 --
 
-INSERT INTO `IS_templatedata` (`id`, `boxid`, `templateid`, `text1`, `text2`, `text3`, `text4`, `int1`, `int2`, `int3`, `int4`) VALUES
-(1, 2, 1, 'http://www.qsd.dk', '', '', '', 0, 0, 0, 0),
-(2, 2, 1, 'http://www.capable.dk', '', '', '', 0, 0, 0, 0),
-(3, 2, 2, 'JEG ER FUCKING SEJ!!!! dfkgs ægæld kgæls gkælgæklgsælkg kælgsgælkfd', 'up', '', '', 0, 0, 0, 1),
-(4, 1, 3, 'upload/movie/Chrome_ImF.mp4', '', '', '', 0, 0, 0, 0),
-(5, 3, 4, 'upload/images/logo1.jpg', '', '', '', 1920, 0, 0, 0),
-(17, 112, 1, 'http://www.capable.dk/agenda.htm', '', '', '', 0, 0, 0, 0),
-(6, 2, 1, 'http://www.qsd.dk', '', '', '', 0, 0, 0, 0),
-(12, 86, 2, 'Test mig ... kom så virk for en i hule ........', 'left', '', '', 0, 2, 0, 2),
-(11, 84, 2, 'ULRIK er lidt sej...', 'left', '', '', 0, 4, 0, 3),
-(13, 81, 2, '', '', '', '', 0, 0, 0, 0),
-(14, 86, 3, '', '', '', '', 0, 0, 0, 0),
-(15, 112, 2, '', '', '', '', 0, 0, 0, 0),
-(16, 111, 2, '', 'up', '', '', 0, 2, 0, 2),
-(33, 3, 6, '', '', '', '', 0, 0, 0, 0),
-(18, 115, 4, 'upload/images/boomerrang.jpg', '', '', '', 0, 0, 0, 0),
-(19, 116, 2, '', 'up', '', '', 0, 2, 0, 1),
-(20, 116, 1, 'http://www.capable.dk/agenda.htm', '', '', '', 0, 0, 0, 0),
-(21, 117, 3, 'upload/movie/Chrome_ImF.mp4', '', '', '', 0, 0, 0, 0),
-(22, 118, 4, 'upload/images/boomerrang.jpg', '', '', '', 0, 0, 0, 0),
-(23, 119, 1, '../onscreen/upload/link/agenda.htm', '', '', '', 0, 0, 0, 0),
-(24, 119, 2, '', 'up', '', '', 0, 2, 0, 1),
-(25, 120, 3, 'upload/movie/Chrome_ImF.mp4', '', '', '', 0, 0, 0, 0),
-(26, 121, 2, '', '', '', '', 0, 1, 0, 5),
-(27, 121, 2, '', '', '', '', 0, 0, 0, 6),
-(28, 122, 4, 'upload/images/boomerrang.jpg', '', '', '', 0, 0, 0, 0),
-(29, 123, 1, 'http://www.capable.dk/agenda.htm', '', '', '', 0, 0, 0, 0),
-(30, 123, 2, '', 'up', '', '', 0, 2, 0, 4),
-(31, 124, 3, 'upload/movie/Chrome_ImF.mp4', '', '', '', 0, 0, 0, 0),
-(32, 122, 4, 'upload/images/logo1.jpg', '', '', '', 0, 0, 0, 0),
-(34, 3, 6, 'upload/images/boomerrang.jpg', '', '', '', 0, 0, 0, 0),
-(35, 3, 6, '', '', '', '', 0, 0, 0, 0),
-(36, 123, 6, 'onscreen/upload/images/hus', '', '', '', 0, 0, 0, 0),
-(37, 125, 6, 'onscreen/upload/images/hus', '', '', '', 0, 0, 0, 0),
-(38, 125, 7, 'fsdffsdf<br>[IS_cellsplit]<b>fdsfs</b><br>[IS_cellsplit]<i>fdsfsd</i><br>[IS_cellsplit]<br>[IS_cellsplit]<br>[IS_cellsplit]<br>[IS_cellsplit]<br>[IS_cellsplit]<br>[IS_cellsplit]<br>[IS_cellsplit]', '100[IS_cellsplit]300[IS_cellsplit]200[IS_cellsplit]250[IS_cellsplit]', '', '', 3, 3, 0, 0),
-(39, 125, 2, '', '', '', '', 0, 0, 0, 2),
-(40, 126, 2, '', '', '', '', 0, 1, 0, 3),
-(41, 126, 7, 'ewterwt<br>[IS_cellsplit]erterwte<br>[IS_cellsplit]', '100[IS_cellsplit]300[IS_cellsplit]300[IS_cellsplit]', '', '', 1, 2, 0, 0),
-(42, 126, 6, 'onscreen/upload/images/sne', '', '', '', 5, 0, 0, 0),
-(43, 126, 6, '', '', '', '', 0, 0, 0, 0),
-(44, 126, 7, '10:00 - 11:00<br>[IS_cellsplit]Sportsstævne<br>[IS_cellsplit]', '100[IS_cellsplit]200[IS_cellsplit]200[IS_cellsplit]', '', '', 1, 2, 0, 0),
-(45, 129, 4, 'upload/images/logo1.jpg', '', '', '', 0, 0, 0, 0),
-(46, 130, 6, 'onscreen/upload/images/hus', '', '', '', 3, 0, 0, 0),
-(47, 131, 2, '', 'up', '', '', 0, 3, 0, 1),
-(48, 131, 1, 'http://www.rdhuset.dk', '', '', '', 0, 0, 0, 0),
-(49, 132, 7, 'weiuyroiuwqeyriuwqehfwe<br>rf<br>wer<br>we¨rwer<br>[IS_cellsplit]rweqrqwejroiweqrhpoweqhrfq<br>er<br>f<br>er<br>fe<br>rw<br>[IS_cellsplit]ferqwferwfer<br>w<br>f<br>ewr<br>f<br>erw<br>[IS_cellsplit]frewferwferwfer<br><div>gfdg</div><div>dfsg</div><div>dsg</div><div>fdsg</div><div>sfdgs</div><div>d</div>[IS_cellsplit]ferwf<br>[IS_cellsplit]erwferwfe<br>[IS_cellsplit]', '100[IS_cellsplit]300[IS_cellsplit]400[IS_cellsplit]', '', '', 3, 2, 0, 0),
-(50, 133, 3, 'upload/movie/Chrome_ImF.mp4', '', '', '', 0, 0, 0, 0),
-(51, 131, 6, 'onscreen/upload/images/sne', '', '', '', 10, 0, 0, 0),
-(52, 134, 1, 'http://www.capable.dk', '', '', '', 0, 0, 0, 0),
-(53, 133, 4, '', '', '', '', 0, 0, 0, 0),
-(54, 133, 2, '', '', '', '', 0, 0, 0, 0),
-(55, 133, 4, '', '', '', '', 0, 0, 0, 0),
-(56, 135, 4, '', '', '', '', 0, 0, 0, 0),
-(57, 135, 2, '', '', '', '', 0, 0, 0, 6),
-(58, 135, 7, 'dqwd<br>[IS_cellsplit]<font color="#FF3366">qweqw</font><br>[IS_cellsplit]ewqe<br>[IS_cellsplit]qw<br>[IS_cellsplit]', '100[IS_cellsplit]200[IS_cellsplit]200[IS_cellsplit]', '', '', 2, 2, 0, 0),
-(59, 137, 2, '', 'left', '', '', 0, 1, 0, 7),
-(60, 135, 8, 'http://nyhederne.tv2.dk/rss', 'left', '', '', 0, 2, 0, 0),
-(62, 139, 7, '<b><font size="5">Mølleåen</font></b>[IS_cellsplit]Dansk lærerforening[IS_cellsplit]Varandastuen[IS_cellsplit]<br>[IS_cellsplit]Furesøen[IS_cellsplit]<br>[IS_cellsplit]<br>[IS_cellsplit]<br>[IS_cellsplit]<br>[IS_cellsplit]<br>[IS_cellsplit]<br>[IS_cellsplit]<br>[IS_cellsplit]<br>[IS_cellsplit]<br>[IS_cellsplit]<br>[IS_cellsplit]<br>[IS_cellsplit]<br>[IS_cellsplit]<br>[IS_cellsplit]<br>[IS_cellsplit]<br>[IS_cellsplit]', '20[IS_cellsplit]200[IS_cellsplit]400[IS_cellsplit]', '', '', 10, 2, 0, 0),
-(61, 138, 4, 'upload/images/sinatur.png', '', '', '', 0, 0, 0, 0),
-(63, 139, 3, 'upload/movie/Chrome_ImF.mp4', '', '', '', 0, 0, 0, 0),
-(64, 137, 4, 'upload/images/logo1.jpg', '', '', '', 0, 0, 0, 0),
-(65, 139, 2, '', '', '', '', 0, 0, 0, 0),
-(66, 139, 3, 'upload/movie/Chrome_ImF.mp4', '', '', '', 0, 0, 0, 0),
-(67, 140, 1, 'http://www.capable.dk', '', '', '', 0, 0, 0, 0),
-(68, 139, 9, '', '', '', '', 0, 0, 0, 0),
-(69, 139, 9, '', '', '', '', 0, 0, 0, 0),
-(70, 141, 9, '', '', '', '', 0, 0, 0, 0),
-(71, 142, 7, 'Test[IS_cellsplit]123 super[IS_cellsplit]Næste møde[IS_cellsplit]Hvem kommer[IS_cellsplit]<br>[IS_cellsplit]<br>[IS_cellsplit]', '100[IS_cellsplit]100[IS_cellsplit]200[IS_cellsplit]', '[[IS_cellsplit]1[IS_cellsplit]', '', 3, 2, 0, 0),
-(72, 144, 4, 'upload/images/sinatur.png', '', '', '', 0, 0, 0, 0),
-(73, 145, 4, 'upload/images/sinatur.png', '', '', '', 0, 0, 0, 0),
-(74, 146, 4, 'upload/images/top.png', '', '', '', 0, 0, 0, 0),
-(75, 147, 7, '<p class="MsoNormal"><span style="font-size: 28pt; line-height: 44.4266662597656px; font-family: Calibri; color: rgb(166, 166, 166); font-weight: bold;" lang="da">Vi byder velkommen til</span></p>[IS_cellsplit]<p class="MsoNormal"><br></p>[IS_cellsplit]<font color="#a6a6a6" face="Calibri"><span style="font-size: 24px; line-height: 28.5599994659424px;"><b>TEVA Danmark A/S</b></span></font>[IS_cellsplit]<font color="#a6a6a6" face="Calibri"><span style="font-size: 24px; line-height: 28.5599994659424px;"><b>FURESØ</b></span></font>[IS_cellsplit]<font color="#a6a6a6" face="Calibri"><span style="font-size: 24px; line-height: 28.5599994659424px;"><b>ISS Facility Service A/S</b></span></font>[IS_cellsplit]<font color="#a6a6a6" face="Calibri"><span style="font-size: 24px; line-height: 28.5599994659424px;"><b>MØLLEÅEN</b></span></font>[IS_cellsplit]<font color="#a6a6a6" face="Calibri"><span style="font-size: 24px; line-height: 28.5599994659424px;"><b>DIS - Danish International Students</b></span></font>[IS_cellsplit]<font color="#a6a6a6" face="Calibri"><span style="font-size: 24px; line-height: 28.5599994659424px;"><b>LYNGBY SØ</b></span></font>[IS_cellsplit]<span style="color: rgb(166, 166, 166); font-family: Calibri; font-size: 24px; font-weight: bold; line-height: 28.5599994659424px;">SDC A/S</span><br>[IS_cellsplit]<font color="#a6a6a6" face="Calibri"><span style="font-size: 24px; line-height: 28.5599994659424px;"><b>VERANDASTUEN</b></span></font>[IS_cellsplit]<br>[IS_cellsplit]<font color="#a6a6a6" face="Calibri"><span style="font-size: 24px; line-height: 28.5599994659424px;"><b>BAGSVÆRD SØ</b></span></font>[IS_cellsplit]<br>[IS_cellsplit]<font color="#a6a6a6" face="Calibri"><span style="font-size: 24px; line-height: 28.5599994659424px;"><b>2C</b></span></font>[IS_cellsplit]<br>[IS_cellsplit]<font color="#a6a6a6" face="Calibri"><span style="font-size: 24px; line-height: 28.5599994659424px;"><b>2D</b></span></font>[IS_cellsplit]<br>[IS_cellsplit]<font color="#a6a6a6" face="Calibri"><span style="font-size: 24px; line-height: 28.5599994659424px;"><b>VEJLESØ</b></span></font>[IS_cellsplit]<br>[IS_cellsplit]<span style="color: rgb(166, 166, 166); font-family: Calibri; font-size: 24px; font-weight: bold; line-height: 28.5599994659424px;">FREDERIKSDAL</span><br>[IS_cellsplit]', '50[IS_cellsplit]600[IS_cellsplit]400[IS_cellsplit]', '[[IS_cellsplit]1[IS_cellsplit]3[IS_cellsplit]4[IS_cellsplit]5[IS_cellsplit]', '', 10, 2, 0, 0),
-(78, 151, 2, '', 'up', '', '', 0, 0, 0, 8),
-(79, 152, 4, 'upload/images/teambuilding.png', '', '', '', 0, 0, 0, 0),
-(80, 153, 4, 'upload/images/eksklusice.png', '', '', '', 0, 0, 0, 0),
-(81, 154, 3, 'upload/movie/sinatur.mp4', '', '', '', 0, 0, 0, 0),
-(82, 147, 4, 'upload/images/capable.jpg', '', '', '', 0, 0, 0, 0),
-(83, 147, 4, 'upload/images/capable.jpg', '', '', '', 0, 0, 0, 0),
-(84, 155, 3, '', '', '', '', 0, 0, 0, 0),
-(85, 155, 4, 'upload/images/capable.jpg', '', '', '', 0, 0, 0, 0),
-(86, 155, 7, '<br>[IS_cellsplit]<br>[IS_cellsplit]<br>[IS_cellsplit]<br>[IS_cellsplit]', '50[IS_cellsplit]400[IS_cellsplit]400[IS_cellsplit]', '[[IS_cellsplit]', '', 2, 2, 0, 0),
-(87, 155, 2, '', '', '', '', 0, 0, 0, 0),
-(88, 155, 6, '', '', '', '', 0, 0, 0, 0),
-(89, 155, 8, '', '', '', '', 0, 0, 0, 0),
-(90, 155, 1, '', '', '', '', 0, 0, 0, 0),
-(76, 149, 9, '', '', '', '', 0, 0, 0, 0),
-(77, 148, 8, 'http://nyhederne.tv2.dk/rss', '', '', '', 0, 1, 0, 0);
-
--- --------------------------------------------------------
+LOCK TABLES `IS_templatedata` WRITE;
+/*!40000 ALTER TABLE `IS_templatedata` DISABLE KEYS */;
+INSERT INTO `IS_templatedata` VALUES (1,3,4,'upload/images/sinatur.png','','','',0,0,0,0),(2,4,4,'upload/images/top.png','','','',0,0,0,0),(3,6,9,'','','','',0,0,0,0),(4,8,7,'<FONT color=#595959 size=7 face=arial><B>Vi byder velkommen til</B></FONT>[IS_cellsplit]<FONT color=#595959 size=7 face=arial><B>Lokale</B></FONT>[IS_cellsplit]<FONT size=6 face=arial><B>VIRKSOMHEDS KONFERENCE</B></FONT>[IS_cellsplit]<FONT color=#595959 size=6 face=arial>FURESØEN</FONT>[IS_cellsplit]<FONT size=6 face=arial><B>FOSS</B></FONT>[IS_cellsplit]<FONT color=#595959 size=6 face=arial>MØLLEÅEN</FONT>[IS_cellsplit]<FONT size=6 face=arial><B>Netværk for Division-&amp; Funktionsdirektører</B></FONT>[IS_cellsplit]<FONT color=#595959 size=6 face=arial>LYNGBY SØ</FONT>[IS_cellsplit]<FONT size=6 face=arial><B>SAMPENSION</B></FONT>[IS_cellsplit]<FONT color=#595959 size=6 face=arial>BAGSVÆRD SØ</FONT>[IS_cellsplit]<FONT size=6 face=arial><B>Ressourcecenter Ydre Nørrebro</B></FONT>[IS_cellsplit]<FONT color=#595959 size=6 face=arial>VERANDASTUEN</FONT>[IS_cellsplit]<FONT size=6 face=arial><B>DTU - Uddannelse &amp; Studerende</B></FONT>[IS_cellsplit]<SPAN style=\"COLOR: rgb(89,89,89); FONT-SIZE: xx-large\"><FONT face=arial>VEJLESØ</FONT></SPAN><BR>[IS_cellsplit]<STRONG><FONT size=6 face=Arial>Markmann Training</FONT></STRONG><BR>[IS_cellsplit]<FONT color=#595959 size=6 face=arial>FREDERIKSDAL</FONT>[IS_cellsplit]<P align=left><FONT size=6 face=Arial><B>Ungdomsskolen</B></FONT></P>[IS_cellsplit]<SPAN style=\"FONT-FAMILY: arial; COLOR: rgb(89,89,89); FONT-SIZE: xx-large\">1A</SPAN><BR>[IS_cellsplit]<FONT size=6 face=arial><B>Incentive</B></FONT>[IS_cellsplit]<SPAN style=\"FONT-FAMILY: arial; COLOR: rgb(89,89,89); FONT-SIZE: xx-large\">1B</SPAN><BR>[IS_cellsplit]<FONT size=6 face=Arial><B>Dong Energy</B></FONT>[IS_cellsplit]<FONT color=#595959 size=6 face=arial>1C</FONT>[IS_cellsplit]<FONT size=6></FONT>[IS_cellsplit]<SPAN style=\"FONT-FAMILY: arial; COLOR: rgb(89,89,89); FONT-SIZE: xx-large\">2A</SPAN><BR>[IS_cellsplit]<FONT size=6 face=arial><B>LEAD AUDITOR UDDANNELSE</B></FONT>[IS_cellsplit]<SPAN style=\"FONT-FAMILY: arial; COLOR: rgb(89,89,89); FONT-SIZE: xx-large\">2C</SPAN><BR>[IS_cellsplit]<FONT size=6 face=arial><B>Glostrup Hospital</B></FONT>[IS_cellsplit]<SPAN style=\"FONT-FAMILY: arial; COLOR: rgb(89,89,89); FONT-SIZE: xx-large\">2D</SPAN><BR>[IS_cellsplit]<STRONG><FONT size=6 face=Arial>Rødkilde Skole</FONT></STRONG>[IS_cellsplit]<SPAN style=\"FONT-FAMILY: arial; COLOR: rgb(89,89,89); FONT-SIZE: xx-large\">3A</SPAN><BR>[IS_cellsplit]<SPAN style=\"FONT-FAMILY: arial; COLOR: rgb(89,89,89); FONT-SIZE: xx-large\">X</SPAN><BR>[IS_cellsplit]<FONT color=#595959 size=6 face=arial>4A</FONT>[IS_cellsplit]<FONT size=6 face=arial><B>X</B></FONT>[IS_cellsplit]<BR><SPAN style=\"FONT-FAMILY: arial; COLOR: rgb(89,89,89); FONT-SIZE: xx-large\">RESTAURANT</SPAN>[IS_cellsplit]','50[IS_cellsplit]700[IS_cellsplit]300[IS_cellsplit]','[[IS_cellsplit]1[IS_cellsplit]2[IS_cellsplit]3[IS_cellsplit]5[IS_cellsplit]7[IS_cellsplit]','',17,2,0,0),(5,5,8,'http://nyhederne.tv2.dk/rss','','','',0,1,0,0),(6,10,4,'upload/images/teambuilding.png','','','',0,0,0,0),(7,11,4,'upload/images/eksklusice.png','','','',0,0,0,0),(8,17,9,'','','','',0,0,0,0),(9,14,4,'upload/images/sinatur.png','','','',0,0,0,0),(10,16,8,'http://nyhederne.tv2.dk/rss','','','',0,1,0,0),(11,15,4,'upload/images/top.png','','','',0,0,0,0),(12,19,4,'upload/images/vinglas.png','','','',0,0,0,0),(13,20,4,'upload/images/oekologogisk.png','','','',0,0,0,0),(14,21,4,'upload/images/oekologogisk.png','','','',0,0,0,0),(15,22,2,'','','','',0,0,0,1),(43,50,4,'upload/images/sinatur.png','','','',0,0,0,0),(44,51,9,'','','','',0,0,0,0),(45,54,3,'upload/movie/Sinatur_Hotel.mp4','','','',0,0,0,0),(46,10,4,'upload/images/Event_billeder_hjemmeside/Sinatur_ophold.png','','','',0,0,0,0),(21,19,3,'upload/movie/Sinatur_Hotel.mp4','','','',0,0,0,0),(16,10,4,'upload/images/eksklusice.png','','','',0,0,0,0),(17,10,6,'','','','',0,0,0,0),(18,10,6,'','','','',0,0,0,0),(19,10,4,'upload/images/eksklusice.png','','','',0,0,0,0),(20,11,4,'upload/images/teambuilding.png','','','',0,0,0,0),(22,19,7,'','','','',0,0,0,0),(23,26,4,'upload/images/sinatur.png','','','',0,0,0,0),(24,27,9,'','','','',0,0,0,0),(25,29,8,'http://nyhederne.tv2.dk/rss','','','',0,1,0,0),(26,31,2,'','','','',0,0,0,1),(27,32,4,'upload/images/oekologogisk.png','','','',0,0,0,0),(28,33,3,'upload/movie/Sinatur_Hotel.mp4','','','',0,0,0,0),(29,35,9,'','','','',0,0,0,0),(30,37,8,'http://nyhederne.tv2.dk/rss','','','',0,1,0,0),(31,34,4,'upload/images/sinatur.png','','','',0,0,0,0),(32,39,7,'<br>[IS_cellsplit]<span style=\"color: rgb(89, 89, 89); font-family: calibri; font-size: xx-large;\">FURESØEN</span><br>[IS_cellsplit]<span style=\"color: rgb(89, 89, 89); font-family: calibri; font-size: xx-large;\">Henrik</span><br>[IS_cellsplit]<span style=\"color: rgb(89, 89, 89); font-family: calibri; font-size: xx-large;\">MØLLEÅEN</span><br>[IS_cellsplit]<font color=\"#595959\" face=\"calibri\" size=\"6\">Karina &amp; Michael</font>[IS_cellsplit]<span style=\"color: rgb(89, 89, 89); font-family: calibri; font-size: xx-large;\">BAGSVÆRD SØ</span>[IS_cellsplit]<br>[IS_cellsplit]<span style=\"color: rgb(89, 89, 89); font-family: calibri; font-size: xx-large;\">LYNGBY SØ</span><br>[IS_cellsplit]<br>[IS_cellsplit]<span style=\"color: rgb(89, 89, 89); font-family: calibri; font-size: xx-large;\">VERANDASTUEN</span><br>[IS_cellsplit]<span style=\"color: rgb(89, 89, 89); font-family: calibri; font-size: xx-large;\">Peter Hansen</span>[IS_cellsplit]<span style=\"color: rgb(89, 89, 89); font-family: calibri; font-size: xx-large;\">VEJLESØ</span><br>[IS_cellsplit]<br>[IS_cellsplit]<span style=\"color: rgb(89, 89, 89); font-family: calibri; font-size: xx-large;\">FREDERIKSDAL</span><br>[IS_cellsplit]<br>[IS_cellsplit]<br>[IS_cellsplit]','85[IS_cellsplit]600[IS_cellsplit]300[IS_cellsplit]','[[IS_cellsplit]1[IS_cellsplit]2[IS_cellsplit]3[IS_cellsplit]4[IS_cellsplit]5[IS_cellsplit]6[IS_cellsplit]7[IS_cellsplit]','',8,2,0,0),(33,41,7,'<b style=\"color: rgb(89, 89, 89); font-family: calibri; font-size: -webkit-xxx-large;\">Vi byder velkommen til</b><br>[IS_cellsplit]<b style=\"color: rgb(89, 89, 89); font-family: calibri; font-size: -webkit-xxx-large;\">Lokale</b><br>[IS_cellsplit]','50[IS_cellsplit]700[IS_cellsplit]300[IS_cellsplit]','[[IS_cellsplit]1[IS_cellsplit]','',1,2,0,0),(34,40,4,'upload/images/white.png','','','',0,0,0,0),(35,42,4,'upload/images/dk_flag.jpg','','','',0,0,0,0),(36,43,4,'upload/images/wedding.jpg','','','',0,0,0,0),(37,44,4,'upload/images/white.png','','','',0,0,0,0),(38,46,4,'upload/images/dk_flag.jpg','','','',0,0,0,0),(39,47,4,'upload/images/white.png','','','',0,0,0,0),(40,45,4,'upload/images/white.png','','','',0,0,0,0),(41,48,4,'upload/images/teambuilding.png','','','',0,0,0,0),(42,49,4,'upload/images/eksklusice.png','','','',0,0,0,0),(47,10,4,'upload/images/Event_billeder_hjemmeside/Sinatur_event.png','','','',0,0,0,0),(48,31,6,'','','','',0,0,0,0),(49,31,4,'upload/images/vinglas.png','','','',0,0,0,0),(50,8,4,'upload/images/vinglas.png','','','',0,0,0,0);
+/*!40000 ALTER TABLE `IS_templatedata` ENABLE KEYS */;
+UNLOCK TABLES;
 
 --
 -- Table structure for table `IS_texts`
 --
 
 DROP TABLE IF EXISTS `IS_texts`;
-CREATE TABLE IF NOT EXISTS `IS_texts` (
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `IS_texts` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `textinput` text NOT NULL,
   `active` varchar(1) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=9 ;
+) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Dumping data for table `IS_texts`
 --
 
-INSERT INTO `IS_texts` (`id`, `textinput`, `active`) VALUES
-(1, '<b><font size="4">VELKOMMEN&nbsp;</font></b><div><br></div><div><b>Omklædning 1:</b></div><div>HERRER</div><div><b><br></b></div><div><b>Omklædning 2:</b></div><div>DAMER</div><div><br></div><div>jkfhdaslgkhsdfkgsfdjkgh djkgf</div><div>dfsg</div><div>sdfgfdg</div><div>dfsg</div><div>sfdg</div><div>s</div><div><br></div><div><br></div><div><br></div><div><br></div><div><br></div><div><br></div><div><br></div><div><br></div><div><br></div><div><br></div><div><br></div><div>HEJ GEJ GEJGE JGEJGEJ</div><div><br></div><div><br></div><div><br></div><div>yrtyrtyrty</div>', '1'),
-(7, 'TEST!!!!! SCROL<div><br></div><div>SCROLL SCROLL</div><div><br></div><div><br></div><div><br></div><div>fsdjkalfhslfdkægjfda''hgsdjhdksfh''h''sdg¨dfg</div><div>fdsg</div><div>fdg</div><div><br></div><div>g</div><div>fdg</div><div>sfdg</div><div>sfdg</div>', '1'),
-(2, '<p>321424124321423<br>fsdafsadfsdafsadfsd</p><p>&nbsp;</p>', '1'),
-(3, '<p>fsdfsfsdfstrettertwtrewttwer</p><p>t</p><p>rewt</p><p>erwtert</p><p>trw</p><p>t</p>', '1'),
-(4, '<table width="813" style="width: 609pt; border-collapse: collapse;" border="0" cellspacing="0" cellpadding="0">\r\n\r\n <colgroup><col width="215" style="width: 161pt; mso-width-source: userset; mso-width-alt: 7862;">\r\n <col width="143" style="width: 107pt; mso-width-source: userset; mso-width-alt: 5229;">\r\n <col width="256" style="width: 192pt; mso-width-source: userset; mso-width-alt: 9362;">\r\n <col width="199" style="width: 149pt; mso-width-source: userset; mso-width-alt: 7277;">\r\n <tbody><tr height="20" style="height: 15pt;">\r\n  <td width="813" height="20" class="xl70" style="border: 0px windowtext; width: 609pt; height: 15pt; background-color: transparent;" colspan="4"><strong><font face="Calibri" size="3">Medlemmer\r\n  i Sorø-gruppe 1 i Boomerang<br></font></strong></td>\r\n </tr>\r\n <tr height="20" style="height: 15pt;">\r\n  <td height="20" class="xl66" style="border: 0px windowtext; height: 15pt; background-color: transparent;"><strong><font face="Calibri" size="3">Firma</font></strong></td>\r\n  <td class="xl66" style="border: 0px windowtext; background-color: transparent;"><strong><font face="Calibri" size="3">Navn</font></strong></td>\r\n  <td class="xl66" style="border: 0px windowtext; background-color: transparent;"><strong><font face="Calibri" size="3">Branche</font></strong></td>\r\n  <td class="xl66" style="border: 0px windowtext; background-color: transparent;"><strong><font face="Calibri" size="3">Mail</font></strong></td>\r\n </tr>\r\n <tr height="20" style="height: 15pt;">\r\n  <td height="20" class="xl65" style="border: 0px windowtext; height: 15pt; background-color: transparent;"><font face="Calibri" size="3">Advodan</font></td>\r\n  <td class="xl65" style="border: 0px windowtext; background-color: transparent;"><font face="Calibri" size="3">Jacob B. Madsen</font></td>\r\n  <td class="xl65" style="border: 0px windowtext; background-color: transparent;"><font face="Calibri" size="3">Advokat</font></td>\r\n  <td class="xl67" style="border: 0px windowtext; background-color: transparent;"><a href="mailto:jabm@advodan.dk"><span style="color: windowtext;"><font face="Calibri" size="3">jabm@advodan.dk</font></span></a></td>\r\n </tr>\r\n <tr height="20" style="height: 15pt;">\r\n  <td height="20" class="xl65" style="border: 0px windowtext; height: 15pt; background-color: transparent;"><font face="Calibri" size="3">Allan Hebo</font></td>\r\n  <td class="xl65" style="border: 0px windowtext; background-color: transparent;"></td>\r\n  <td class="xl65" style="border: 0px windowtext; background-color: transparent;"><font face="Calibri" size="3">Iværksætter</font></td>\r\n  <td class="xl67" style="border: 0px windowtext; background-color: transparent;"><a href="mailto:admin@heboit.dk"><span style="color: windowtext;"><font face="Calibri" size="3">admin@heboit.dk</font></span></a></td>\r\n </tr>\r\n <tr height="20" style="height: 15pt;">\r\n  <td height="20" class="xl65" style="border: 0px windowtext; height: 15pt; background-color: transparent;"><font face="Calibri" size="3">AM Marketing</font></td>\r\n  <td class="xl65" style="border: 0px windowtext; background-color: transparent;"><font face="Calibri" size="3">Mie Levy Kortsen</font></td>\r\n  <td class="xl65" style="border: 0px windowtext; background-color: transparent;"><font face="Calibri" size="3">Freelance marketing</font></td>\r\n  <td class="xl67" style="border: 0px windowtext; background-color: transparent;"><a href="mailto:mie@ammarketing.dk"><span style="color: windowtext;"><font face="Calibri" size="3">mie@ammarketing.dk</font></span></a></td>\r\n </tr>\r\n <tr height="20" style="height: 15pt;">\r\n  <td height="20" class="xl65" style="border: 0px windowtext; height: 15pt; background-color: transparent;"><font face="Calibri" size="3">Bogføringsværkstedet</font></td>\r\n  <td class="xl65" style="border: 0px windowtext; background-color: transparent;"><font face="Calibri" size="3">Lotte Sennenwaldt</font></td>\r\n  <td class="xl65" style="border: 0px windowtext; background-color: transparent;"><font face="Calibri" size="3">Bogføring</font></td>\r\n  <td class="xl67" style="border: 0px windowtext; background-color: transparent;"><a href="mailto:lotte@bogfoerings-vaerksted.dk"><span style="color: windowtext;"><font face="Calibri" size="3">lotte@bogfoerings-vaerksted.dk</font></span></a></td>\r\n </tr>\r\n <tr height="20" style="height: 15pt;">\r\n  <td height="20" class="xl65" style="border: 0px windowtext; height: 15pt; background-color: transparent;"><font face="Calibri" size="3">Boutique Yvonne</font></td>\r\n  <td class="xl65" style="border: 0px windowtext; background-color: transparent;"><font face="Calibri" size="3">Yvonne Uldahl</font></td>\r\n  <td class="xl65" style="border: 0px windowtext; background-color: transparent;"><font face="Calibri" size="3">Modetøj til den voksne pige</font></td>\r\n  <td class="xl67" style="border: 0px windowtext; background-color: transparent;"><a href="mailto:uldahl@mail.tele.dk"><span style="color: windowtext;"><font face="Calibri" size="3">uldahl@mail.tele.dk</font></span></a></td>\r\n </tr>\r\n <tr height="20" style="height: 15pt;">\r\n  <td height="20" class="xl65" style="border: 0px windowtext; height: 15pt; background-color: transparent;"><font face="Calibri" size="3">Butik Havehuset</font></td>\r\n  <td class="xl65" style="border: 0px windowtext; background-color: transparent;"><font face="Calibri" size="3">Lotte Jensen</font></td>\r\n  <td class="xl65" style="border: 0px windowtext; background-color: transparent;"><font face="Calibri" size="3">Ting til hus og have</font></td>\r\n  <td class="xl67" style="border: 0px windowtext; background-color: transparent;"><a href="mailto:kontakt@butikhavehuset.dk"><span style="color: windowtext;"><font face="Calibri" size="3">kontakt@butikhavehuset.dk</font></span></a></td>\r\n </tr>\r\n <tr height="20" style="height: 15pt;">\r\n  <td height="20" class="xl65" style="border: 0px windowtext; height: 15pt; background-color: transparent;"><font face="Calibri" size="3">Capable IT</font></td>\r\n  <td class="xl65" style="border: 0px windowtext; background-color: transparent;"><font face="Calibri" size="3">Michael Lykkegaard</font></td>\r\n  <td class="xl65" style="border: 0px windowtext; background-color: transparent;"></td>\r\n  <td class="xl67" style="border: 0px windowtext; background-color: transparent;"><a href="mailto:michael.lykkegaard@capable.dk"><span style="color: windowtext;"><font face="Calibri" size="3">michael.lykkegaard@capable.dk</font></span></a></td>\r\n </tr>\r\n <tr height="60" style="height: 45pt;">\r\n  <td height="60" class="xl65" style="border: 0px windowtext; height: 45pt; background-color: transparent;"><font face="Calibri" size="3">Chokoman</font></td>\r\n  <td class="xl65" style="border: 0px windowtext; background-color: transparent;"><font face="Calibri" size="3">Jørgen Gornitzka</font></td>\r\n  <td width="256" class="xl69" style="border: 0px windowtext; width: 192pt; background-color: transparent;"><font size="3"><font face="Calibri"><strong>Chokoladeoplevelser</strong><font class="font5"> i form af smagninger, teambuilding og kurser i fyldt chokolade\r\n  og flødeboller</font></font></font></td>\r\n  <td class="xl67" style="border: 0px windowtext; background-color: transparent;"><a href="mailto:chokoman@chokoman.dk"><span style="color: windowtext;"><font face="Calibri" size="3">chokoman@chokoman.dk</font></span></a></td>\r\n </tr>\r\n <tr height="40" style="height: 30pt;">\r\n  <td height="40" class="xl65" style="border: 0px windowtext; height: 30pt; background-color: transparent;"><font face="Calibri" size="3">CostCutterCompany</font></td>\r\n  <td class="xl65" style="border: 0px windowtext; background-color: transparent;"><font face="Calibri" size="3">Carsten Lund</font></td>\r\n  <td width="256" class="xl68" style="border: 0px windowtext; width: 192pt; background-color: transparent;"><font face="Calibri" size="3">Kontraktstyring &amp; Rådgivning\r\n  vedr. besparelser på indirekte omkostninger</font></td>\r\n  <td class="xl67" style="border: 0px windowtext; background-color: transparent;"><a href="mailto:cl@cc-company.dk"><span style="color: windowtext;"><font face="Calibri" size="3">cl@cc-company.dk</font></span></a></td>\r\n </tr>\r\n <tr height="20" style="height: 15pt;">\r\n  <td height="20" class="xl65" style="border: 0px windowtext; height: 15pt; background-color: transparent;"><font face="Calibri" size="3">Danbolig Sorø</font></td>\r\n  <td class="xl65" style="border: 0px windowtext; background-color: transparent;"><font face="Calibri" size="3">Else Jürgensen</font></td>\r\n  <td class="xl65" style="border: 0px windowtext; background-color: transparent;"><font face="Calibri" size="3">Ejendomsmægler</font></td>\r\n  <td class="xl67" style="border: 0px windowtext; background-color: transparent;"><a href="mailto:else.jurgensen@danbolig.dk"><span style="color: windowtext;"><font face="Calibri" size="3">else.jurgensen@danbolig.dk</font></span></a></td>\r\n </tr>\r\n <tr height="20" style="height: 15pt;">\r\n  <td height="20" class="xl65" style="border: 0px windowtext; height: 15pt; background-color: transparent;"><font face="Calibri" size="3">Deloitte</font></td>\r\n  <td class="xl65" style="border: 0px windowtext; background-color: transparent;"><font face="Calibri" size="3">Morten Kristiansen</font></td>\r\n  <td class="xl65" style="border: 0px windowtext; background-color: transparent;"><font face="Calibri" size="3">Revision</font></td>\r\n  <td class="xl67" style="border: 0px windowtext; background-color: transparent;"><a href="mailto:mkristiansen@deloitte.dk"><span style="color: windowtext;"><font face="Calibri" size="3">mkristiansen@deloitte.dk</font></span></a></td>\r\n </tr>\r\n <tr height="20" style="height: 15pt;">\r\n  <td height="20" class="xl65" style="border: 0px windowtext; height: 15pt; background-color: transparent;"><font face="Calibri" size="3">DesignMekker</font></td>\r\n  <td class="xl65" style="border: 0px windowtext; background-color: transparent;"><font face="Calibri" size="3">Esben Søltoft</font></td>\r\n  <td class="xl65" style="border: 0px windowtext; background-color: transparent;"></td>\r\n  <td class="xl67" style="border: 0px windowtext; background-color: transparent;"><a href="mailto:designmekker@designmekker.dk"><span style="color: windowtext;"><font face="Calibri" size="3">designmekker@designmekker.dk</font></span></a></td>\r\n </tr>\r\n <tr height="20" style="height: 15pt;">\r\n  <td height="20" class="xl65" style="border: 0px windowtext; height: 15pt; background-color: transparent;"><font face="Calibri" size="3">DL Net</font></td>\r\n  <td class="xl65" style="border: 0px windowtext; background-color: transparent;"><font face="Calibri" size="3">Johannes Dahl Lumholt</font></td>\r\n  <td class="xl65" style="border: 0px windowtext; background-color: transparent;"><font face="Calibri" size="3">Online Markedsføring</font></td>\r\n  <td class="xl67" style="border: 0px windowtext; background-color: transparent;"><a href="mailto:johannes@dl-net.dk"><span style="color: windowtext;"><font face="Calibri" size="3">johannes@dl-net.dk</font></span></a></td>\r\n </tr>\r\n <tr height="20" style="height: 15pt;">\r\n  <td height="20" class="xl65" style="border: 0px windowtext; height: 15pt; background-color: transparent;"><font face="Calibri" size="3">DSV Transport</font></td>\r\n  <td class="xl65" style="border: 0px windowtext; background-color: transparent;"><font face="Calibri" size="3">Henrik Christoffersen</font></td>\r\n  <td class="xl65" style="border: 0px windowtext; background-color: transparent;"></td>\r\n  <td class="xl67" style="border: 0px windowtext; background-color: transparent;"><a href="mailto:henrik.christoffersen@dsvtransport.dk"><span style="color: windowtext;"><font face="Calibri" size="3">henrik.christoffersen@dsvtransport.dk</font></span></a></td>\r\n </tr>\r\n <tr height="20" style="height: 15pt;">\r\n  <td height="20" class="xl65" style="border: 0px windowtext; height: 15pt; background-color: transparent;"><font face="Calibri" size="3">Ergolet</font></td>\r\n  <td class="xl65" style="border: 0px windowtext; background-color: transparent;"><font face="Calibri" size="3">Dan Betak</font></td>\r\n  <td class="xl65" style="border: 0px windowtext; background-color: transparent;"><font face="Calibri" size="3">Hjælpemidler</font></td>\r\n  <td class="xl67" style="border: 0px windowtext; background-color: transparent;"><a href="mailto:dbe@ergolet.dk"><span style="color: windowtext;"><font face="Calibri" size="3">dbe@ergolet.dk</font></span></a></td>\r\n </tr>\r\n <tr height="20" style="height: 15pt;">\r\n  <td height="20" class="xl65" style="border: 0px windowtext; height: 15pt; background-color: transparent;"><font face="Calibri" size="3">Eva Biehe</font></td>\r\n  <td class="xl65" style="border: 0px windowtext; background-color: transparent;"></td>\r\n  <td class="xl65" style="border: 0px windowtext; background-color: transparent;"><font face="Calibri" size="3">Psykoterapeut</font></td>\r\n  <td class="xl67" style="border: 0px windowtext; background-color: transparent;"><a href="mailto:eva@biehe.dk"><span style="color: windowtext;"><font face="Calibri" size="3">eva@biehe.dk</font></span></a></td>\r\n </tr>\r\n <tr height="20" style="height: 15pt;">\r\n  <td height="20" class="xl65" style="border: 0px windowtext; height: 15pt; background-color: transparent;"><font face="Calibri" size="3">Farmers Marked</font></td>\r\n  <td class="xl65" style="border: 0px windowtext; background-color: transparent;"><font face="Calibri" size="3">Dinny Rebild</font></td>\r\n  <td class="xl65" style="border: 0px windowtext; background-color: transparent;"></td>\r\n  <td class="xl67" style="border: 0px windowtext; background-color: transparent;"><a href="mailto:sdrebild@gmail.com"><span style="color: windowtext;"><font face="Calibri" size="3">sdrebild@gmail.com</font></span></a></td>\r\n </tr>\r\n <tr height="20" style="height: 15pt;">\r\n  <td height="20" class="xl65" style="border: 0px windowtext; height: 15pt; background-color: transparent;"><font face="Calibri" size="3">Hartmanns</font></td>\r\n  <td class="xl65" style="border: 0px windowtext; background-color: transparent;"><font face="Calibri" size="3">Carsten Madsen</font></td>\r\n  <td class="xl65" style="border: 0px windowtext; background-color: transparent;"><font face="Calibri" size="3">Rekruttering</font></td>\r\n  <td class="xl67" style="border: 0px windowtext; background-color: transparent;"><a href="mailto:carsten.madsen@hartmanns.dk"><span style="color: windowtext;"><font face="Calibri" size="3">carsten.madsen@hartmanns.dk</font></span></a></td>\r\n </tr>\r\n <tr height="20" style="height: 15pt;">\r\n  <td height="20" class="xl65" style="border: 0px windowtext; height: 15pt; background-color: transparent;"><font face="Calibri" size="3">Haverefugiet</font></td>\r\n  <td class="xl65" style="border: 0px windowtext; background-color: transparent;"><font face="Calibri" size="3">Ella Hilker</font></td>\r\n  <td class="xl65" style="border: 0px windowtext; background-color: transparent;"></td>\r\n  <td class="xl65" style="border: 0px windowtext; background-color: transparent;"><font face="Calibri" size="3">emh@haverefugiet.dk</font></td>\r\n </tr>\r\n <tr height="20" style="height: 15pt;">\r\n  <td height="20" class="xl65" style="border: 0px windowtext; height: 15pt; background-color: transparent;"><font face="Calibri" size="3">If Forsikring</font></td>\r\n  <td class="xl65" style="border: 0px windowtext; background-color: transparent;"><font size="3"><font face="Calibri">Morten Busk<span style="mso-spacerun: yes;">&nbsp;</span></font></font></td>\r\n  <td class="xl65" style="border: 0px windowtext; background-color: transparent;"><font face="Calibri" size="3">Privat forsikring</font></td>\r\n  <td class="xl67" style="border: 0px windowtext; background-color: transparent;"><a href="mailto:mob@if-viborg.dk"><span style="color: windowtext;"><font face="Calibri" size="3">mob@if-viborg.dk</font></span></a></td>\r\n </tr>\r\n <tr height="20" style="height: 15pt;">\r\n  <td height="20" class="xl65" style="border: 0px windowtext; height: 15pt; background-color: transparent;"><font face="Calibri" size="3">IF forsikring</font></td>\r\n  <td class="xl65" style="border: 0px windowtext; background-color: transparent;"><font face="Calibri" size="3">Tina Bech</font></td>\r\n  <td class="xl65" style="border: 0px windowtext; background-color: transparent;"><font face="Calibri" size="3">Erhvervsforsikring</font></td>\r\n  <td class="xl67" style="border: 0px windowtext; background-color: transparent;"><a href="mailto:tina.bech@if.dk"><span style="color: windowtext;"><font face="Calibri" size="3">tina.bech@if.dk</font></span></a></td>\r\n </tr>\r\n <tr height="20" style="height: 15pt;">\r\n  <td height="20" class="xl65" style="border: 0px windowtext; height: 15pt; background-color: transparent;"><font face="Calibri" size="3">Jeanette Bernholm</font></td>\r\n  <td class="xl65" style="border: 0px windowtext; background-color: transparent;"><font face="Calibri" size="3">Jeannette Bernholm</font></td>\r\n  <td class="xl65" style="border: 0px windowtext; background-color: transparent;"><font face="Calibri" size="3">Mobil frisør</font></td>\r\n  <td class="xl67" style="border: 0px windowtext; background-color: transparent;"><a href="mailto:jb@jeanettebernholm.dk"><span style="color: windowtext;"><font face="Calibri" size="3">jb@jeanettebernholm.dk</font></span></a></td>\r\n </tr>\r\n <tr height="20" style="height: 15pt;">\r\n  <td height="20" class="xl65" style="border: 0px windowtext; height: 15pt; background-color: transparent;"><font face="Calibri" size="3">Jens Essendrop</font></td>\r\n  <td class="xl65" style="border: 0px windowtext; background-color: transparent;"><font face="Calibri" size="3">Jens Essendrop</font></td>\r\n  <td class="xl65" style="border: 0px windowtext; background-color: transparent;"><font face="Calibri" size="3">Reklamefotograf</font></td>\r\n  <td class="xl67" style="border: 0px windowtext; background-color: transparent;"><a href="mailto:essendrop@mac.com"><span style="color: windowtext;"><font face="Calibri" size="3">essendrop@mac.com</font></span></a></td>\r\n </tr>\r\n <tr height="20" style="height: 15pt;">\r\n  <td height="20" class="xl65" style="border: 0px windowtext; height: 15pt; background-color: transparent;"><font face="Calibri" size="3">Kongskilde Friluftsgård</font></td>\r\n  <td class="xl65" style="border: 0px windowtext; background-color: transparent;"><font face="Calibri" size="3">Renè de la Cruz</font></td>\r\n  <td class="xl65" style="border: 0px windowtext; background-color: transparent;"><font face="Calibri" size="3">Restauration og festlokaler</font></td>\r\n  <td class="xl67" style="border: 0px windowtext; background-color: transparent;"><a href="mailto:rc@d-kf.dk"><span style="color: windowtext;"><font face="Calibri" size="3">rc@d-kf.dk</font></span></a></td>\r\n </tr>\r\n <tr height="20" style="height: 15pt;">\r\n  <td height="20" class="xl65" style="border: 0px windowtext; height: 15pt; background-color: transparent;"><font face="Calibri" size="3">Lemann Grafisk</font></td>\r\n  <td class="xl65" style="border: 0px windowtext; background-color: transparent;"><font face="Calibri" size="3">Preben Lemann</font></td>\r\n  <td class="xl65" style="border: 0px windowtext; background-color: transparent;"><font face="Calibri" size="3">Trykkeri</font></td>\r\n  <td class="xl67" style="border: 0px windowtext; background-color: transparent;"><a href="mailto:lemann.grafisk@gmail.com"><span style="color: windowtext;"><font face="Calibri" size="3">lemann.grafisk@gmail.com</font></span></a></td>\r\n </tr>\r\n <tr height="20" style="height: 15pt;">\r\n  <td height="20" class="xl65" style="border: 0px windowtext; height: 15pt; background-color: transparent;"><font face="Calibri" size="3">LL Services</font></td>\r\n  <td class="xl65" style="border: 0px windowtext; background-color: transparent;"><font face="Calibri" size="3">Lotte Brøns</font></td>\r\n  <td class="xl67" style="border: 0px windowtext; background-color: transparent;"><u><font face="Calibri" size="3">Salgskonsulent og havedesigner</font></u></td>\r\n  <td class="xl67" style="border: 0px windowtext; background-color: transparent;"><a href="mailto:info@luxuslife.dk"><span style="color: windowtext;"><font face="Calibri" size="3">info@luxuslife.dk</font></span></a></td>\r\n </tr>\r\n <tr height="20" style="height: 15pt;">\r\n  <td height="20" class="xl65" style="border: 0px windowtext; height: 15pt; background-color: transparent;"><font face="Calibri" size="3">Lyse Rum</font></td>\r\n  <td class="xl65" style="border: 0px windowtext; background-color: transparent;"><font face="Calibri" size="3">Helle Nielsen</font></td>\r\n  <td class="xl65" style="border: 0px windowtext; background-color: transparent;"><font face="Calibri" size="3">Indretningsarkitekt</font></td>\r\n  <td class="xl67" style="border: 0px windowtext; background-color: transparent;"><a href="mailto:helle@lyserum.dk"><span style="color: windowtext;"><font face="Calibri" size="3">helle@lyserum.dk</font></span></a></td>\r\n </tr>\r\n <tr height="20" style="height: 15pt;">\r\n  <td height="20" class="xl65" style="border: 0px windowtext; height: 15pt; background-color: transparent;"><font face="Calibri" size="3">Mads Massør</font></td>\r\n  <td class="xl65" style="border: 0px windowtext; background-color: transparent;"><font face="Calibri" size="3">Mads Krøyer</font></td>\r\n  <td class="xl65" style="border: 0px windowtext; background-color: transparent;"><font face="Calibri" size="3">Massør</font></td>\r\n  <td class="xl67" style="border: 0px windowtext; background-color: transparent;"><a href="mailto:post@madsmassor.dk"><span style="color: windowtext;"><font face="Calibri" size="3">post@madsmassor.dk</font></span></a></td>\r\n </tr>\r\n <tr height="20" style="height: 15pt;">\r\n  <td height="20" class="xl65" style="border: 0px windowtext; height: 15pt; background-color: transparent;"><font face="Calibri" size="3">MB Sikring</font></td>\r\n  <td class="xl65" style="border: 0px windowtext; background-color: transparent;"><font face="Calibri" size="3">Michael Bøje</font></td>\r\n  <td class="xl65" style="border: 0px windowtext; background-color: transparent;"><font face="Calibri" size="3">Alarmer</font></td>\r\n  <td class="xl67" style="border: 0px windowtext; background-color: transparent;"><a href="mailto:mb@mb-sikring.dk"><span style="color: windowtext;"><font face="Calibri" size="3">mb@mb-sikring.dk</font></span></a></td>\r\n </tr>\r\n <tr height="20" style="height: 15pt;">\r\n  <td height="20" class="xl65" style="border: 0px windowtext; height: 15pt; background-color: transparent;"><font face="Calibri" size="3">Nordea Dianalund</font></td>\r\n  <td class="xl65" style="border: 0px windowtext; background-color: transparent;"><font face="Calibri" size="3">Marianne Klærke</font></td>\r\n  <td class="xl65" style="border: 0px windowtext; background-color: transparent;"><font face="Calibri" size="3">Bank/Privatkunder</font></td>\r\n  <td class="xl67" style="border: 0px windowtext; background-color: transparent;"><a href="mailto:marianne.klaerke@nordea.dk"><span style="color: windowtext;"><font face="Calibri" size="3">marianne.klaerke@nordea.dk</font></span></a></td>\r\n </tr>\r\n <tr height="20" style="height: 15pt;">\r\n  <td height="20" class="xl65" style="border: 0px windowtext; height: 15pt; background-color: transparent;"><font face="Calibri" size="3">Nowweb</font></td>\r\n  <td class="xl65" style="border: 0px windowtext; background-color: transparent;"><font face="Calibri" size="3">Brian Rønnow</font></td>\r\n  <td class="xl65" style="border: 0px windowtext; background-color: transparent;"><font face="Calibri" size="3">Udformning af hjemmesider</font></td>\r\n  <td class="xl67" style="border: 0px windowtext; background-color: transparent;"><a href="mailto:info@nowweb.dk"><span style="color: windowtext;"><font face="Calibri" size="3">info@nowweb.dk</font></span></a></td>\r\n </tr>\r\n <tr height="20" style="height: 15pt;">\r\n  <td height="20" class="xl65" style="border: 0px windowtext; height: 15pt; background-color: transparent;"><font face="Calibri" size="3">Ny Kropsholdning</font></td>\r\n  <td class="xl65" style="border: 0px windowtext; background-color: transparent;"><font face="Calibri" size="3">Tina Madsen</font></td>\r\n  <td class="xl65" style="border: 0px windowtext; background-color: transparent;"><font face="Calibri" size="3">Rolf metode terapeut/ bindevævsmassage</font></td>\r\n  <td class="xl67" style="border: 0px windowtext; background-color: transparent;"><a href="mailto:info@nykropsholdning.dk"><span style="color: windowtext;"><font face="Calibri" size="3">info@nykropsholdning.dk</font></span></a></td>\r\n </tr>\r\n <tr height="20" style="height: 15pt;">\r\n  <td height="20" class="xl65" style="border: 0px windowtext; height: 15pt; background-color: transparent;"><font face="Calibri" size="3">Ostenfeld Biler</font></td>\r\n  <td class="xl65" style="border: 0px windowtext; background-color: transparent;"><font face="Calibri" size="3">Carsten Ostenfeld</font></td>\r\n  <td class="xl65" style="border: 0px windowtext; background-color: transparent;"><font face="Calibri" size="3">Reparation og salg af biler</font></td>\r\n  <td class="xl67" style="border: 0px windowtext; background-color: transparent;"><a href="mailto:salg@ostenfeld-biler.dk"><span style="color: windowtext;"><font face="Calibri" size="3">salg@ostenfeld-biler.dk</font></span></a></td>\r\n </tr>\r\n <tr height="20" style="height: 15pt;">\r\n  <td height="20" class="xl65" style="border: 0px windowtext; height: 15pt; background-color: transparent;"><font face="Calibri" size="3">Porskrog Consult</font></td>\r\n  <td class="xl65" style="border: 0px windowtext; background-color: transparent;"><font face="Calibri" size="3">Michael Porskrog</font></td>\r\n  <td class="xl65" style="border: 0px windowtext; background-color: transparent;"><font face="Calibri" size="3">Auditør</font></td>\r\n  <td class="xl67" style="border: 0px windowtext; background-color: transparent;"><a href="mailto:michael@porskrog.dk"><span style="color: windowtext;"><font face="Calibri" size="3">michael@porskrog.dk</font></span></a></td>\r\n </tr>\r\n <tr height="20" style="height: 15pt;">\r\n  <td height="20" class="xl65" style="border: 0px windowtext; height: 15pt; background-color: transparent;"><font face="Calibri" size="3">Renskib</font></td>\r\n  <td class="xl65" style="border: 0px windowtext; background-color: transparent;"><font face="Calibri" size="3">Martin Massenberg</font></td>\r\n  <td class="xl65" style="border: 0px windowtext; background-color: transparent;"><font face="Calibri" size="3">Bådplejeprodukter m.v.</font></td>\r\n  <td class="xl67" style="border: 0px windowtext; background-color: transparent;"><a href="mailto:info@renskib.dk"><span style="color: windowtext;"><font face="Calibri" size="3">info@renskib.dk</font></span></a></td>\r\n </tr>\r\n <tr height="20" style="height: 15pt;">\r\n  <td height="20" class="xl65" style="border: 0px windowtext; height: 15pt; background-color: transparent;"><font face="Calibri" size="3">Satisfactor</font></td>\r\n  <td class="xl65" style="border: 0px windowtext; background-color: transparent;"><font face="Calibri" size="3">Susanne Bauerfeind</font></td>\r\n  <td class="xl65" style="border: 0px windowtext; background-color: transparent;"><font face="Calibri" size="3">HR</font></td>\r\n  <td class="xl67" style="border: 0px windowtext; background-color: transparent;"><a href="mailto:sb@satisfactor.dk"><span style="color: windowtext;"><font face="Calibri" size="3">sb@satisfactor.dk</font></span></a></td>\r\n </tr>\r\n <tr height="20" style="height: 15pt;">\r\n  <td height="20" class="xl65" style="border: 0px windowtext; height: 15pt; background-color: transparent;"><font face="Calibri" size="3">Sonja Petersen</font></td>\r\n  <td class="xl65" style="border: 0px windowtext; background-color: transparent;"><font face="Calibri" size="3">Sonja Petersen</font></td>\r\n  <td class="xl65" style="border: 0px windowtext; background-color: transparent;"><font face="Calibri" size="3">Oversættelse og undervisning (tysk/dansk)</font></td>\r\n  <td class="xl67" style="border: 0px windowtext; background-color: transparent;"><a href="mailto:sonja@sonjas.dk"><span style="color: windowtext;"><font face="Calibri" size="3">sonja@sonjas.dk</font></span></a></td>\r\n </tr>\r\n <tr height="20" style="height: 15pt;">\r\n  <td height="20" class="xl65" style="border: 0px windowtext; height: 15pt; background-color: transparent;"><font face="Calibri" size="3">Soraya Hudpleje</font></td>\r\n  <td class="xl65" style="border: 0px windowtext; background-color: transparent;"><font face="Calibri" size="3">Helle Jensen</font></td>\r\n  <td class="xl65" style="border: 0px windowtext; background-color: transparent;"><font face="Calibri" size="3">Alternativ Hudpleje</font></td>\r\n  <td class="xl67" style="border: 0px windowtext; background-color: transparent;"><a href="mailto:sorayahudpleje@hotmail.com"><span style="color: windowtext;"><font face="Calibri" size="3">sorayahudpleje@hotmail.com</font></span></a></td>\r\n </tr>\r\n <tr height="20" style="height: 15pt;">\r\n  <td height="20" class="xl65" style="border: 0px windowtext; height: 15pt; background-color: transparent;"><font face="Calibri" size="3">Sorø Event &amp; Turist</font></td>\r\n  <td class="xl65" style="border: 0px windowtext; background-color: transparent;"><font face="Calibri" size="3">Jesper Nygård</font></td>\r\n  <td class="xl65" style="border: 0px windowtext; background-color: transparent;"><font face="Calibri" size="3">Event og Turisme</font></td>\r\n  <td class="xl67" style="border: 0px windowtext; background-color: transparent;"><a href="mailto:jesper@soroeturisme.dk"><span style="color: windowtext;"><font face="Calibri" size="3">jesper@soroeturisme.dk</font></span></a></td>\r\n </tr>\r\n <tr height="20" style="height: 15pt;">\r\n  <td height="20" class="xl65" style="border: 0px windowtext; height: 15pt; background-color: transparent;"><font face="Calibri" size="3">Sorø Kommune</font></td>\r\n  <td class="xl65" style="border: 0px windowtext; background-color: transparent;"><font face="Calibri" size="3">Birgitte Nielsen</font></td>\r\n  <td class="xl65" style="border: 0px windowtext; background-color: transparent;"><font face="Calibri" size="3">Konsulent</font></td>\r\n  <td class="xl67" style="border: 0px windowtext; background-color: transparent;"><a href="mailto:bini@soroe.dk"><span style="color: windowtext;"><font face="Calibri" size="3">bini@soroe.dk</font></span></a></td>\r\n </tr>\r\n <tr height="20" style="height: 15pt;">\r\n  <td height="20" class="xl65" style="border: 0px windowtext; height: 15pt; background-color: transparent;"><font face="Calibri" size="3">Sorø Kommune</font></td>\r\n  <td class="xl65" style="border: 0px windowtext; background-color: transparent;"><font face="Calibri" size="3">Peter Fjerring</font></td>\r\n  <td class="xl65" style="border: 0px windowtext; background-color: transparent;"><font face="Calibri" size="3">Udviklingskonsulent</font></td>\r\n  <td class="xl67" style="border: 0px windowtext; background-color: transparent;"><a href="mailto:pefj@soroe.dk"><span style="color: windowtext;"><font face="Calibri" size="3">pefj@soroe.dk</font></span></a></td>\r\n </tr>\r\n <tr height="20" style="height: 15pt;">\r\n  <td height="20" class="xl65" style="border: 0px windowtext; height: 15pt; background-color: transparent;"><font face="Calibri" size="3">Topp Salg</font></td>\r\n  <td class="xl65" style="border: 0px windowtext; background-color: transparent;"><font face="Calibri" size="3">Malene Topp</font></td>\r\n  <td class="xl65" style="border: 0px windowtext; background-color: transparent;"><font face="Calibri" size="3">Telesalg og Mødebooking</font></td>\r\n  <td class="xl67" style="border: 0px windowtext; background-color: transparent;"><a href="mailto:malene@toppsalg.dk"><span style="color: windowtext;"><font face="Calibri" size="3">malene@toppsalg.dk</font></span></a></td>\r\n </tr>\r\n\r\n</tbody></table>', '1'),
-(6, '<br>Test af helt ny tekst', '1'),
-(5, '<p align="left">Fantastiske Toyota :-)</p>', '1'),
-(8, '<p class="MsoNormal"><span lang="da" style="font-size:\r\n28.0pt;line-height:119%;font-family:Calibri;color:#A6A6A6;mso-style-textfill-type:\r\nsolid;mso-style-textfill-fill-color:#A6A6A6;mso-style-textfill-fill-alpha:100%;\r\nfont-weight:bold;language:da;mso-ansi-language:da;mso-ligatures:none">Vi byder velkommen til</span><span lang="da" style="font-size:28.0pt;line-height:119%;font-family:Calibri;\r\ncolor:#A6A6A6;mso-style-textfill-type:solid;mso-style-textfill-fill-color:#A6A6A6;\r\nmso-style-textfill-fill-alpha:100%;font-weight:bold;language:da;mso-ligatures:\r\nnone"><o:p></o:p></span></p>\r\n\r\n<p class="MsoNormal"><br></p>', '1');
-
--- --------------------------------------------------------
+LOCK TABLES `IS_texts` WRITE;
+/*!40000 ALTER TABLE `IS_texts` DISABLE KEYS */;
+INSERT INTO `IS_texts` VALUES (1,'<p style=\"text-align: center;\" class=\"MsoNormal\" align=\"center\"><font size=\"6\" face=\"\">Marineret æblesalat med hjemmerøget lakse-pluk</font></p>\r\n<p style=\"text-align: center;\" class=\"MsoNormal\" align=\"center\"><font size=\"6\" face=\"\">Indbagt Testrup ost med spinat</font></p>\r\n<p style=\"text-align: center;\" class=\"MsoNormal\" align=\"center\"><font size=\"6\" face=\"\">Dansk limousine kalv marineret i Herslev øl,</font></p><p style=\"text-align: center;\" class=\"MsoNormal\" align=\"center\"><font size=\"6\" face=\"Times New Roman\">Hertil spidskål, rødløg og sennepscreme.</font></p>\r\n<p style=\"text-align: center;\" class=\"MsoNormal\" align=\"center\"><font size=\"6\" face=\"\">2 danske gårdoste med hjemmelavet knækbrød</font></p>\r\n<p style=\"text-align: center;\" class=\"MsoNormal\" align=\"center\"><font size=\"5\" face=\"\"><font size=\"6\">Lun pære, bagt med karamel og hasselnødder, </font></font></p><p style=\"text-align: center;\" class=\"MsoNormal\" align=\"center\"><font size=\"5\" face=\"\"><font size=\"6\">serveret med hjemmerørt økologisk vaniljeis</font></font></p>','1');
+/*!40000 ALTER TABLE `IS_texts` ENABLE KEYS */;
+UNLOCK TABLES;
 
 --
 -- Table structure for table `IS_timeline`
 --
 
 DROP TABLE IF EXISTS `IS_timeline`;
-CREATE TABLE IF NOT EXISTS `IS_timeline` (
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `IS_timeline` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `boxid` int(11) NOT NULL,
   `dataid` int(11) NOT NULL,
@@ -362,113 +227,50 @@ CREATE TABLE IF NOT EXISTS `IS_timeline` (
   `delay` int(11) NOT NULL,
   `active` varchar(1) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=211 ;
+) ENGINE=MyISAM AUTO_INCREMENT=51 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Dumping data for table `IS_timeline`
 --
 
-INSERT INTO `IS_timeline` (`id`, `boxid`, `dataid`, `sorting`, `delay`, `active`) VALUES
-(127, 2, 6, 4, 10000, '1'),
-(2, 2, 2, 2, 10000, '1'),
-(3, 2, 3, 3, 10000, '1'),
-(4, 1, 4, 1, 0, '1'),
-(5, 3, 5, 1, 0, '1'),
-(179, 137, 59, 1, 0, '1'),
-(180, 135, 60, 1, 0, '1'),
-(172, 134, 52, 1, 0, '1'),
-(171, 131, 51, 3, 20000, '1'),
-(170, 133, 50, 1, 0, '1'),
-(169, 132, 49, 1, 0, '1'),
-(168, 131, 48, 2, 10000, '1'),
-(167, 131, 47, 1, 610000, '1'),
-(166, 130, 46, 1, 0, '1'),
-(165, 129, 45, 1, 0, '1'),
-(162, 126, 42, 3, 30000, '1'),
-(164, 126, 44, 4, 600000, '1'),
-(159, 125, 39, 3, 1000, '1'),
-(156, 123, 36, 3, 10000, '1'),
-(155, 3, 35, 2, 1000, '1'),
-(152, 122, 32, 2, 10000, '1'),
-(151, 124, 31, 1, 0, '1'),
-(150, 123, 30, 2, 40000, '1'),
-(149, 123, 29, 1, 20000, '1'),
-(148, 122, 28, 1, 10000, '1'),
-(147, 121, 27, 2, 1000, '1'),
-(146, 121, 26, 1, 0, '1'),
-(145, 120, 25, 1, 0, '1'),
-(144, 119, 24, 2, 40000, '1'),
-(143, 119, 23, 1, 620000, '1'),
-(142, 118, 22, 1, 0, '1'),
-(141, 117, 21, 1, 0, '1'),
-(140, 116, 20, 2, 20000, '1'),
-(139, 116, 19, 1, 40000, '1'),
-(138, 115, 18, 1, 0, '1'),
-(137, 112, 17, 2, 20000, '1'),
-(135, 112, 15, 1, 20000, '1'),
-(133, 81, 13, 1, 1000, '1'),
-(131, 84, 11, 2, 10000, '1'),
-(132, 86, 12, 1, 10000, '1'),
-(136, 111, 16, 1, 2401000, '1'),
-(128, 7, 11, 2, 10000, '1'),
-(181, 138, 61, 1, 0, '1'),
-(185, 139, 65, 1, 50000, '1'),
-(184, 137, 64, 2, 0, '1'),
-(186, 139, 66, 2, 10000, '1'),
-(187, 140, 67, 1, 0, '1'),
-(188, 139, 68, 3, 0, '1'),
-(190, 141, 70, 1, 0, '1'),
-(191, 142, 71, 1, 0, '1'),
-(193, 145, 73, 1, 0, '1'),
-(194, 146, 74, 1, 0, '1'),
-(195, 147, 75, 1, 15000, '1'),
-(196, 149, 76, 1, 0, '1'),
-(197, 148, 77, 1, 0, '1'),
-(198, 151, 78, 1, 0, '1'),
-(199, 152, 79, 1, 0, '1'),
-(200, 153, 80, 1, 0, '1'),
-(201, 154, 81, 1, 0, '1'),
-(203, 147, 83, 2, 5000, '1'),
-(204, 155, 84, 1, 0, '1'),
-(205, 155, 85, 2, 0, '1'),
-(206, 155, 86, 3, 0, '1'),
-(207, 155, 87, 4, 0, '1'),
-(208, 155, 88, 5, 0, '1'),
-(209, 155, 89, 6, 0, '1'),
-(210, 155, 90, 7, 0, '1');
-
--- --------------------------------------------------------
+LOCK TABLES `IS_timeline` WRITE;
+/*!40000 ALTER TABLE `IS_timeline` DISABLE KEYS */;
+INSERT INTO `IS_timeline` VALUES (1,3,1,1,0,'1'),(2,4,2,1,0,'1'),(3,6,3,1,0,'1'),(4,8,4,1,0,'1'),(5,5,5,1,0,'1'),(6,10,6,1,12000,'1'),(7,11,7,1,0,'1'),(8,17,8,1,0,'1'),(9,14,9,1,0,'1'),(10,16,10,1,0,'1'),(11,15,11,1,0,'1'),(21,19,21,1,0,'1'),(13,20,13,1,0,'1'),(14,21,14,1,0,'1'),(15,22,15,1,0,'1'),(22,19,22,2,0,'1'),(23,26,23,1,0,'1'),(24,27,24,1,0,'1'),(25,29,25,1,0,'1'),(26,31,26,1,10000,'1'),(27,32,27,1,0,'1'),(28,33,28,1,0,'1'),(29,35,29,1,0,'1'),(30,37,30,1,0,'1'),(31,34,31,1,0,'1'),(32,39,32,1,0,'1'),(33,41,33,1,0,'1'),(34,40,34,1,0,'1'),(35,42,35,1,0,'1'),(36,43,36,1,0,'1'),(37,44,37,1,0,'1'),(38,46,38,1,0,'1'),(39,47,39,1,0,'1'),(40,45,40,1,0,'1'),(41,48,41,1,0,'1'),(42,49,42,1,0,'1'),(43,50,43,1,0,'1'),(44,51,44,1,0,'1'),(45,54,45,1,0,'1'),(46,10,46,2,12000,'1'),(47,10,47,3,12000,'1');
+/*!40000 ALTER TABLE `IS_timeline` ENABLE KEYS */;
+UNLOCK TABLES;
 
 --
 -- Table structure for table `IS_usergrouprel`
 --
 
 DROP TABLE IF EXISTS `IS_usergrouprel`;
-CREATE TABLE IF NOT EXISTS `IS_usergrouprel` (
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `IS_usergrouprel` (
   `userid` int(11) NOT NULL,
   `groupid` int(11) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Dumping data for table `IS_usergrouprel`
 --
 
-INSERT INTO `IS_usergrouprel` (`userid`, `groupid`) VALUES
-(1, 1),
-(2, 2),
-(3, 4),
-(4, 4),
-(5, 3),
-(6, 5);
-
--- --------------------------------------------------------
+LOCK TABLES `IS_usergrouprel` WRITE;
+/*!40000 ALTER TABLE `IS_usergrouprel` DISABLE KEYS */;
+INSERT INTO `IS_usergrouprel` VALUES (1,1),(2,2),(3,2),(4,3),(5,1),(6,1),(7,3),(8,2);
+/*!40000 ALTER TABLE `IS_usergrouprel` ENABLE KEYS */;
+UNLOCK TABLES;
 
 --
 -- Table structure for table `IS_usergroups`
 --
 
 DROP TABLE IF EXISTS `IS_usergroups`;
-CREATE TABLE IF NOT EXISTS `IS_usergroups` (
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `IS_usergroups` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(250) NOT NULL,
   `description` text NOT NULL,
@@ -483,99 +285,78 @@ CREATE TABLE IF NOT EXISTS `IS_usergroups` (
   `type9` int(11) NOT NULL,
   `type10` int(11) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=7 ;
+) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Dumping data for table `IS_usergroups`
 --
 
-INSERT INTO `IS_usergroups` (`id`, `name`, `description`, `type1`, `type2`, `type3`, `type4`, `type5`, `type6`, `type7`, `type8`, `type9`, `type10`) VALUES
-(1, 'Admin', 'Administratorgruppe', 0, 1, 0, 0, 0, 0, 1, 1, 1, 1),
-(2, 'Chefen', '', 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
-(5, 'Test', 'Test gruppe', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
-(4, 'Omklædning', 'Omklædning', 0, 0, 0, 0, 0, 0, 1, 0, 0, 0);
-
--- --------------------------------------------------------
+LOCK TABLES `IS_usergroups` WRITE;
+/*!40000 ALTER TABLE `IS_usergroups` DISABLE KEYS */;
+INSERT INTO `IS_usergroups` VALUES (1,'admin','Administratorgruppe',0,0,0,0,0,0,0,0,0,0),(2,'Recep','Reception',0,0,0,0,0,0,0,0,0,0),(3,'Tilretter','Må rette i alt',0,0,0,0,0,0,0,0,0,0);
+/*!40000 ALTER TABLE `IS_usergroups` ENABLE KEYS */;
+UNLOCK TABLES;
 
 --
 -- Table structure for table `IS_userrights`
 --
 
 DROP TABLE IF EXISTS `IS_userrights`;
-CREATE TABLE IF NOT EXISTS `IS_userrights` (
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `IS_userrights` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `groupid` int(11) NOT NULL,
-  `type` varchar(250) NOT NULL,
+  `type` varchar(11) NOT NULL,
   `typeid` int(11) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=37 ;
+) ENGINE=MyISAM AUTO_INCREMENT=72 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Dumping data for table `IS_userrights`
 --
 
-INSERT INTO `IS_userrights` (`id`, `groupid`, `type`, `typeid`) VALUES
-(1, 1, 'texts', 1),
-(2, 1, 'box', 1),
-(3, 1, 'menu', 2),
-(4, 1, 'menu', 3),
-(5, 1, 'menu', 4),
-(6, 1, 'menu', 5),
-(7, 1, 'menu', 6),
-(8, 2, 'menu', 4),
-(9, 4, 'box', 137),
-(10, 2, 'box', 137),
-(11, 2, 'box', 139),
-(12, 3, 'box', 138),
-(13, 2, 'box', 138),
-(14, 1, 'box', 136),
-(15, 1, 'box', 137),
-(16, 1, 'box', 138),
-(17, 1, 'box', 139),
-(18, 1, 'box', 140),
-(21, 1, 'box', 141),
-(20, 4, 'box', 140),
-(22, 1, 'box', 142),
-(23, 1, 'box', 143),
-(24, 1, 'box', 144),
-(25, 1, 'box', 145),
-(26, 1, 'box', 146),
-(27, 1, 'box', 147),
-(28, 1, 'box', 148),
-(29, 1, 'box', 149),
-(30, 1, 'box', 150),
-(31, 1, 'box', 151),
-(32, 1, 'box', 152),
-(33, 1, 'box', 153),
-(34, 1, 'box', 154),
-(36, 1, 'box', 155);
-
--- --------------------------------------------------------
+LOCK TABLES `IS_userrights` WRITE;
+/*!40000 ALTER TABLE `IS_userrights` DISABLE KEYS */;
+INSERT INTO `IS_userrights` VALUES (1,1,'menu',2),(2,1,'menu',3),(3,1,'menu',4),(4,1,'menu',5),(5,1,'menu',6),(6,1,'box',1),(7,1,'box',2),(8,1,'box',3),(9,1,'box',4),(10,1,'box',5),(11,1,'box',6),(12,1,'box',7),(13,1,'box',8),(14,1,'box',9),(15,1,'box',10),(16,1,'box',11),(17,1,'box',12),(18,1,'box',13),(19,1,'box',14),(20,1,'box',15),(21,1,'box',16),(22,1,'box',17),(23,1,'box',18),(24,1,'box',19),(25,1,'box',20),(26,1,'box',21),(27,1,'box',22),(42,1,'box',34),(30,2,'box',8),(31,1,'box',23),(32,1,'box',24),(33,1,'box',25),(34,1,'box',26),(35,1,'box',27),(36,1,'box',28),(37,1,'box',29),(38,1,'box',30),(39,1,'box',31),(40,1,'box',32),(41,1,'box',33),(43,1,'box',35),(44,1,'box',36),(45,1,'box',37),(46,1,'box',38),(47,1,'box',39),(48,1,'box',40),(49,1,'box',41),(50,1,'box',42),(51,1,'box',43),(52,1,'box',44),(53,1,'box',45),(54,1,'box',46),(55,1,'box',47),(56,1,'box',48),(57,1,'box',49),(58,3,'menu',3),(59,3,'menu',4),(60,2,'box',39),(61,3,'box',39),(62,2,'box',31),(63,3,'box',31),(64,3,'box',22),(65,2,'box',22),(66,3,'box',8),(67,1,'box',50),(68,1,'box',51),(69,1,'box',52),(70,1,'box',53),(71,1,'box',54);
+/*!40000 ALTER TABLE `IS_userrights` ENABLE KEYS */;
+UNLOCK TABLES;
 
 --
 -- Table structure for table `IS_users`
 --
 
 DROP TABLE IF EXISTS `IS_users`;
-CREATE TABLE IF NOT EXISTS `IS_users` (
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `IS_users` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `username` varchar(30) NOT NULL,
   `password` varchar(16) NOT NULL,
   `active` varchar(1) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=7 ;
+) ENGINE=MyISAM AUTO_INCREMENT=9 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Dumping data for table `IS_users`
 --
 
-INSERT INTO `IS_users` (`id`, `username`, `password`, `active`) VALUES
-(1, 'admin', 'capable', '1'),
-(6, 'testperson', '1234', '1');
+LOCK TABLES `IS_users` WRITE;
+/*!40000 ALTER TABLE `IS_users` DISABLE KEYS */;
+INSERT INTO `IS_users` VALUES (1,'admin','capable','1'),(6,'henrik','Skjoldsvej4717','1'),(8,'reception','1234','1'),(7,'retter','1234','1');
+/*!40000 ALTER TABLE `IS_users` ENABLE KEYS */;
+UNLOCK TABLES;
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
-create user db_user;
-grant all on infoscreen.* to 'db_user'@'localhost' identified by 'Inf0Scr33n';
-
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+-- Dump completed on 2015-03-29  9:28:57

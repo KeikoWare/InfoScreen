@@ -277,7 +277,7 @@ case 4:
 	if($dataTemplate["int1"] > 0)
 	echo '<img src="../'.$dataTemplate["text1"].'" border="'.$dataTemplate["int3"].'" width="'.$dataTemplate["int1"].'">';
 	else
-	echo '<img src="../'.$dataTemplate["text1"].'" border="'.$dataTemplate["int3"].'">';
+	echo '<img src="../'.$dataTemplate["text1"].'" border="'.$dataTemplate["int3"].'" height="'.$dataBox2["height"].'">';
 break;
 
 //TV
@@ -306,20 +306,19 @@ case 7:
 	echo "<table valign='bottom' style='border: 0px solid #000000;' cellspacing='0' cellpadding='5'><tr height='".($sizearray[0]+20)."' valign='bottom'>";
 	for ($i = 1; $i <= $dataTemplate["int1"]; $i++) {
 		$checkstring = "[IS_cellsplit]".$i."[IS_cellsplit]";
-		echo strpos($showarray,$checkstring)."   ";
 		if(strpos($showarray,$checkstring) > 0){
 
 		if($i > 1) echo "</tr><tr height='".($sizearray[0]+20)."' valign='bottom'>";
 		for ($j = 1; $j <= $dataTemplate["int2"]; $j++) {
 			$count++;
 	
-			echo "<td style='border-bottom: 1px solid #000000;' width='".$sizearray[$j]."'>".$textarray[$count].$showarray."->".$i."</td>";
+			echo "<td style='border-bottom: 1px solid #000000;' width='".$sizearray[$j]."'>".$textarray[$count]."</td>";
 		
 		}
 		} else {
-			for ($j = 1; $j <= $dataTemplate["int2"]; $j++) {
-				$count++;
-			}
+		for ($j = 1; $j <= $dataTemplate["int2"]; $j++) {
+			$count++;
+		}		
 		}
 	}
 	
