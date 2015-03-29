@@ -23,6 +23,10 @@ sudo sed –I ‘s/"check_default_browser": true/"check_default_browser": false/
 sudo mkdir ~/.config/autostart
 sudo cp ~/infoscreen/MintStartupScript.sh.desktop ~/.config/autostart
 
+sudo mkdir ~/.config/chromium/
+sudo mkdir ~/.config/chromium/Default/
+sudo cp ~/infoscreen/Preferences ~/.config/chromium/Default/
+
 sudo cp ~/infoscreen/mdm.conf /etc/mdm 
 
 # echo "[Desktop]" > ~/.dmrc
