@@ -3,7 +3,6 @@
       "shortcuts_have_been_created": true
    },
    "browser": {
-      "check_default_browser": false,
       "clear_data": {
          "form_data": true,
          "hosted_apps_data": true,
@@ -14,14 +13,14 @@
       "last_prompted_google_url": "https://www.google.ie/",
       "pepper_flash_settings_enabled": false,
       "window_placement": {
-         "bottom": 743,
-         "left": 0,
+         "bottom": 848,
+         "left": 50,
          "maximized": false,
-         "right": 1024,
+         "right": 1100,
          "top": 0,
-         "work_area_bottom": 743,
+         "work_area_bottom": 875,
          "work_area_left": 0,
-         "work_area_right": 1024,
+         "work_area_right": 1600,
          "work_area_top": 0
       }
    },
@@ -62,7 +61,8 @@
          "initialized": true
       },
       "autoupdate": {
-         "next_check": "13071160998455468"
+         "last_check": "13072110242469947",
+         "next_check": "13072128120251355"
       },
       "chrome_url_overrides": {
          "bookmarks": [ "chrome-extension://eemcgdkfndhakfknompkggombfjjjeno/main.html" ]
@@ -77,7 +77,7 @@
             "creation_flags": 1,
             "from_bookmark": false,
             "from_webstore": false,
-            "install_time": "13071160247832194",
+            "install_time": "13072109694692178",
             "location": 5,
             "manifest": {
                "app": {
@@ -163,8 +163,8 @@
             "from_bookmark": false,
             "from_webstore": true,
             "initial_keybindings_set": true,
-            "install_time": "13071160249542454",
-            "lastpingday": "13071135600721945",
+            "install_time": "13072109696703215",
+            "lastpingday": "13072086001220216",
             "location": 7,
             "manifest": {
                "app": {
@@ -216,7 +216,7 @@
       "accept_languages": "en-US,en"
    },
    "invalidator": {
-      "client_id": "M9HI8RVKY1UTTDxWeNBRxw=="
+      "client_id": "bIH4+aHxNooT04VYJ3jObA=="
    },
    "net": {
       "http_server_properties": {
@@ -229,16 +229,12 @@
                "supports_spdy": false
             },
             "clients2.google.com:443": {
-               "alternate_protocol": {
-                  "port": 443,
-                  "protocol_str": "quic"
-               },
                "settings": {
                   "4": 100
                },
                "supports_spdy": true
             },
-            "r4---sn-uqj-55gl.c.pack.google.com:80": {
+            "r4---sn-uqj-j2ie.c.pack.google.com:80": {
                "alternate_protocol": {
                   "port": 80,
                   "protocol_str": "quic"
