@@ -33,3 +33,5 @@ sudo cp ~/infoscreen/mdm.conf /etc/mdm
 # echo "Session=openbox" >> ~/.dmrc
 
 sudo reboot
+
+# Finish
