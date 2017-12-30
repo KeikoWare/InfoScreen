@@ -17,6 +17,9 @@ Configure Wireless Network
     
     $ sudo nano /etc/wpa_supplicant/wpa_supplicant.conf
     
+    country=DK
+    ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev
+    update_config=1
     network={
         ssid="The_ESSID"
         psk="Your_wifi_password"
