@@ -1,5 +1,11 @@
 # InfoScreen - browser support only
 
+Create SD from RASPBIAN STRETCH LITE image (current release date 2017-11-29)
+
+Boot your PI
+
+If the diaply is roteted wronmg do this to ...
+
 Rotate display
 
     $ sudo nano /boot/config.txt
