@@ -1,6 +1,7 @@
 # InfoScreen - browser support only
 
-Rotate display 
+Rotate display
+
     $ sudo nano /boot/config.txt
 
 Add one of the following lines
