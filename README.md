@@ -29,16 +29,10 @@ Configure Wireless Network
         psk="Your_wifi_password"
     }
 
-Configure your Pi
-    
-    $ sudo raspi-config
-
-Choose #7 Advanced Options
-then choose #A1 Expand Filesystem
-
 Reboot for changes to take effect
 
     $ sudo reboot
+Make sure you are connected to the internet before proceeding.
 
 Update distro
 
@@ -56,6 +50,10 @@ then choose #2 Change TimeZone
 
 Choose #4 Localisation Options
 then choose #3 Change keyboard Layout
+
+Choose #3 Boot Options
+Then choose #B1 Desktop / CLI
+and then #B4 Desktop Autologin - Desktop GUI, automatically logged in as 'pi' user 
 
 Reboot for changes to take effect
 
@@ -78,7 +76,7 @@ Install Xwindow system
     # Screen powermanagement off
     xset -dpms
     # Start Chormium in kiosk mode with incognito to avoid crash start, when powered of hard
-    chromium-browser --kiosk --incognito --disable-translate http://localhost/onscreen
+    chromium-browser --kiosk --incognito --disable-translate http://www.yourInfoScreenService.com/infoScreenIndexPage
   
     $ sudo chmod +x ~/.config/openbox/autostart
   
@@ -90,17 +88,7 @@ Reboot for changes to take effect
 
     $ sudo reboot
 
-Configure Raspberry Pi
-
-    $ sudo raspi-config
-Choose #3 Boot Options
-Then choose #B1 Desktop / CLI
-and then #B4 Desktop Autologin - Desktop GUI, automatically logged in as 'pi' user 
-
-Reboot for changes to take effect
-
-    $ sudo reboot
-
+Done
 
 # InfoScreen
 
