@@ -40,6 +40,9 @@ Update distro
     $ sudo apt-get upgrade
     $ sudo apt-get dist-upgrade
     $ sudo apt-get clean
+
+Confige the Pi
+
     $ sudo raspi-config
 
 Choose #4 Localisation Options
@@ -50,10 +53,6 @@ then choose #2 Change TimeZone
 
 Choose #4 Localisation Options
 then choose #3 Change keyboard Layout
-
-Choose #3 Boot Options
-Then choose #B1 Desktop / CLI
-and then #B4 Desktop Autologin - Desktop GUI, automatically logged in as 'pi' user 
 
 Reboot for changes to take effect
 
@@ -83,6 +82,17 @@ Install Xwindow system
     $ sudo nano ~/.dmrc
     [Desktop]
     Session=openbox
+
+Reboot for changes to take effect
+
+    $ sudo reboot
+
+Confige the Pi one last time
+
+    $ sudo raspi-config
+Choose #3 Boot Options
+Then choose #B1 Desktop / CLI
+and then #B4 Desktop Autologin - Desktop GUI, automatically logged in as 'pi' user 
 
 Reboot for changes to take effect
 
