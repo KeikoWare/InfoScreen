@@ -82,6 +82,12 @@ Install Xwindow system
     $ sudo nano ~/.dmrc
     [Desktop]
     Session=openbox
+    
+    $ sudo nano /etc/lightdm/lightdm.conf 
+    ## under the section [Seat:*] add the following line
+    autologin-session=openbox
+
+
 
 Reboot for changes to take effect
 
